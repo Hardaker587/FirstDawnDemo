@@ -8,8 +8,10 @@
   },
   "devDependencies": {
     "prettier": "2.5.1",
-    "typescript": "4.0.2",
-    "vite": "^2.7.2"
+    "save": "^2.4.0",
+    "typescript": "^4.4.4",
+    "vite": "^2.7.2",
+    "webgl-strict-types": "^1.0.5"
   },
   "dependencies": {
     "@babylonjs/core": "^4.2.0",
