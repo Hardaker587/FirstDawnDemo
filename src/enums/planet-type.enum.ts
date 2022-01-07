@@ -1,0 +1,16 @@
+export enum PlanetType {
+  terrestrial = "terrestrial",
+  gas = "gas",
+  carbon = "carbon",
+  coreless = "coreless",
+  desert = "desert",
+  helium = "helium",
+  hycean = "hycean",
+  ice = "ice",
+  iron = "iron",
+  lava = "lava",
+  ocean = "ocean",
+  proto = "proto",
+  puffy = "puffy",
+  silicate = "silicate",
+}
