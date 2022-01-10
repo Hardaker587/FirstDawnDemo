@@ -82,7 +82,7 @@ export class Game {
     var skyboxMaterial = new BABYLON.StandardMaterial("skyBox", this.scene);
     skyboxMaterial.backFaceCulling = false;
     skyboxMaterial.reflectionTexture = new BABYLON.CubeTexture(
-      new URL('/assets/skyboxes/skybox', import.meta.url).href,
+      "/skyboxes/skybox",
       this.scene,
       ["_px.png", "_py.png", "_pz.png", "_nx.png", "_ny.png", "_nz.png"]
     );
