@@ -5,7 +5,8 @@
     "dev": "vite",
     "full-build": "tsc && vite build",
     "build": "vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "start": "vite --port $PORT"
   },
   "devDependencies": {
     "prettier": "2.5.1",
