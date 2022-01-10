@@ -1,5 +1,5 @@
 // import Worker from "../utilities/service.workers";
-import Worker from '../utilities/service.workers?worker';
+import Worker from "../utilities/service.workers?worker";
 import * as BABYLON from "@babylonjs/core/Legacy/legacy";
 import { NoiseSettings, PlanetOptions } from "../types/types";
 import { ColorGradientFactory } from "../utilities/color-gradient.utility";
@@ -17,6 +17,12 @@ const hashStringToInt = (s: string) => {
     return a & a;
   }, 0);
 };
+
+import { getGPUTier } from "detect-gpu";
+let gpuTier = 1;
+(async () => {
+  await getGPUTier().then((res) => (gpuTier = res.tier));
+})();
 
 /**
  * Wraps web-worker to build procedural textures
@@ -190,18 +196,19 @@ class PlanetMaterialManager {
   /**
    * New procedural material generation
    */
-  protected generateMaterial(scene: BABYLON.Scene): BABYLON.Material {
+  protected async generateMaterial(
+    scene: BABYLON.Scene
+  ): Promise<BABYLON.Material> {
     this._raw = new BABYLON.StandardMaterial(this.name, scene);
     this._raw.wireframe = true; // hide ugly textureless sphere
-
-    this.generateBaseTextures(256).then(() => {
+    this.generateBaseTextures(256 * gpuTier).then(() => {
       this._raw.diffuseTexture = this.diffuseMap;
       this._raw.specularTexture = this.specularMap;
       this._raw.bumpTexture = this.bumpMap;
       this._raw.bumpTexture.level = 0.2;
       this._raw.wireframe = false;
 
-      this.generateBaseTextures(512).then(() => {
+      this.generateBaseTextures(512 * gpuTier).then(() => {
         this._raw.diffuseTexture.dispose();
         this._raw.specularTexture.dispose();
         this._raw.bumpTexture.dispose();
@@ -211,7 +218,7 @@ class PlanetMaterialManager {
         this._raw.bumpTexture = this.bumpMap;
         this._raw.bumpTexture.level = +this.options.roughness > 0 ? 0.45 : 0.05;
 
-        this.generateBaseTextures(1024)
+        this.generateBaseTextures(1024 * gpuTier)
           .then(() => {
             this._raw.diffuseTexture.dispose();
             this._raw.specularTexture.dispose();

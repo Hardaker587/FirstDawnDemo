@@ -68,6 +68,13 @@ babylonjs-gltf2interface@4.2.0:
   resolved "https://registry.yarnpkg.com/babylonjs-gltf2interface/-/babylonjs-gltf2interface-4.2.0.tgz#b0ef1e11e3574cf2c6f573d0c5c34857a2a7b322"
   integrity sha512-Fn/ThxwZWP9kEAqk+9FX9CAeF4ah/I0/8wzAZR8MQuYqlYpEfM+E/IztJ+4LoOOxQYMWNs5lgj8OXSkX0tqc4g==
 
+detect-gpu@^4.0.4:
+  version "4.0.4"
+  resolved "https://registry.yarnpkg.com/detect-gpu/-/detect-gpu-4.0.4.tgz#967c6b23e4956c51e5251b26e53395af0b3292aa"
+  integrity sha512-X78lSZ6XBVdxAaaMQ6EZk8nC7NUsXmYbIELEJlxgjDMLZiV2KmdpUQfjP1Zexca5iXADXeeqxW8Sw7O0xrauQA==
+  dependencies:
+    webgl-constants "^1.1.1"
+
 duplexer@^0.1.1, duplexer@~0.1.1:
   version "0.1.2"
   resolved "https://registry.yarnpkg.com/duplexer/-/duplexer-0.1.2.tgz#3abe43aef3835f8ae077d136ddce0f276b0400e6"
@@ -366,6 +373,11 @@ vite@^2.7.2:
     rollup "^2.59.0"
   optionalDependencies:
     fsevents "~2.3.2"
+
+webgl-constants@^1.1.1:
+  version "1.1.1"
+  resolved "https://registry.yarnpkg.com/webgl-constants/-/webgl-constants-1.1.1.tgz#f9633ee87fea56647a60b9ce735cbdfb891c6855"
+  integrity sha512-LkBXKjU5r9vAW7Gcu3T5u+5cvSvh5WwINdr0C+9jpzVB41cjQAP5ePArDtk/WHYdVj0GefCgM73BA7FlIiNtdg==
 
 webgl-strict-types@^1.0.5:
   version "1.0.5"

@@ -17,6 +17,7 @@
   "dependencies": {
     "@babylonjs/core": "^4.2.0",
     "@babylonjs/inspector": "^4.2.0",
+    "detect-gpu": "^4.0.4",
     "open-simplex-noise": "^2.5.0",
     "uuid": "^8.3.2",
     "vite": "^2.7.2"
