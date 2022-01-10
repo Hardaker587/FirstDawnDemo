@@ -247,11 +247,11 @@ class PlanetMaterialManager {
       scene
     );
     this._rawAtmosphere.reflectionTexture = new BABYLON.Texture(
-      "./src/textures/atmosphere.png",
+      "/textures/atmosphere.png",
       scene
     );
     this._rawAtmosphere.diffuseTexture = new BABYLON.Texture(
-      "./src/textures/planetClouds1.jpg",
+      "/textures/planetClouds1.jpg",
       scene
     );
     this._rawAtmosphere.diffuseTexture.level = Math.min(
@@ -316,7 +316,7 @@ class PlanetMaterialManager {
     );
 
     const sphereNormalTexture = new Image();
-    sphereNormalTexture.src = `./src/textures/planetObjectSpaceNormal.png`;
+    sphereNormalTexture.src = `/textures/planetObjectSpaceNormal.png`;
     await new Promise((resolve) => {
       sphereNormalTexture.onload = () => resolve();
     });
