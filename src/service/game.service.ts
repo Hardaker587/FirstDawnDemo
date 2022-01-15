@@ -47,13 +47,14 @@ export class Game {
   planet: any;
 
   constructor(element: HTMLCanvasElement) {
-    const engineOptions: engineOptions = {
-      antialias: false,
-    };
-
     window.game = this;
     // set up the main engine
-    this.engine = new BABYLON.Engine(element, undefined, engineOptions, false);
+    this.engine = new BABYLON.Engine(
+      element,
+      undefined,
+      { preserveDrawingBuffer: true, stencil: true },
+      true
+    );
     // set up the main scene
     this.scene = new BABYLON.Scene(this.engine);
     // set up the main camera
@@ -82,7 +83,7 @@ export class Game {
     var skyboxMaterial = new BABYLON.StandardMaterial("skyBox", this.scene);
     skyboxMaterial.backFaceCulling = false;
     skyboxMaterial.reflectionTexture = new BABYLON.CubeTexture(
-      "/skyboxes/skybox",
+      `/skyboxes/${Math.floor(Math.random() * 4)}/skybox`,
       this.scene,
       ["_px.png", "_py.png", "_pz.png", "_nx.png", "_ny.png", "_nz.png"]
     );
@@ -105,14 +106,20 @@ export class Game {
       landMassSize: Math.floor(Math.random() * 100),
     };
 
-    this.planet = new Planet("planet", randomPlanet ?? {}, this.scene);
+    this.planet = new Planet(
+      "planet",
+      randomPlanet,
+      this.scene,
+      this.engine,
+      this.camera
+    );
 
     // make it pretty
     this.prepareGraphicalPipeline();
 
-    if (process.env.NODE_ENV != "production") {
-      this.scene.debugLayer.show({ embedMode: true, overlay: true });
-    }
+    // if (process.env.NODE_ENV != "production") {
+    //   this.scene.debugLayer.show({ embedMode: true, overlay: true });
+    // }
     // render that biatch
     this.engine.runRenderLoop(() => this.render());
   }

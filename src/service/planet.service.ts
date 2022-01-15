@@ -30,6 +30,9 @@ export class PlanetMesh extends BABYLON.TransformNode {
     this.setInspectableProperties();
 
     scene.addTransformNode(this);
+
+    const statusContainer = document.getElementById("currentStatus");
+    statusContainer.innerText = "Loading mesh...";
   }
 
   set material(value: BABYLON.Material) {
@@ -204,11 +207,21 @@ class Planet extends BABYLON.TransformNode {
   mesh: PlanetMesh;
   materialManager: PlanetMaterialManager;
   scene: BABYLON.Scene;
+  engine: BABYLON.Engine;
+  camera: BABYLON.Camera;
   options: PlanetOptions;
 
-  constructor(name: string = "planet", options: any, scene: BABYLON.Scene) {
+  constructor(
+    name: string = "planet",
+    options: any,
+    scene: BABYLON.Scene,
+    engine: BABYLON.Engine,
+    camera: BABYLON.Camera
+  ) {
     super(name);
     this.scene = scene;
+    this.engine = engine;
+    this.camera = camera;
     this.options = {
       terrainSeed: uuid.v4(), // 'Foo' was also a good initial value
       type: "terrestrial",
@@ -236,7 +249,9 @@ class Planet extends BABYLON.TransformNode {
     this.materialManager = new PlanetMaterialManager(
       "myPlanetMat",
       this.options,
-      scene
+      scene,
+      this.engine,
+      this.camera
     );
     this.mesh.material = this.materialManager.raw;
     this.mesh.atmosphereMaterial = this.materialManager.rawAtmosphere;

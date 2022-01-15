@@ -68,6 +68,8 @@ class PlanetMaterialManager {
   name: string;
   options: PlanetOptions;
   scene: BABYLON.Scene;
+  engine: BABYLON.Engine;
+  camera: BABYLON.Camera;
   _noiseSettings: NoiseSettings;
   _raw: BABYLON.StandardMaterial;
   _rawAtmosphere: BABYLON.StandardMaterial;
@@ -79,10 +81,14 @@ class PlanetMaterialManager {
   constructor(
     name: string = "planetTexture",
     options: PlanetOptions,
-    scene: BABYLON.Scene
+    scene: BABYLON.Scene,
+    engine: BABYLON.Engine,
+    camera: BABYLON.Camera
   ) {
     this.name = name;
     this.scene = scene;
+    this.engine = engine;
+    this.camera = camera;
     this.options = options;
     this._noiseSettings = [
       {
@@ -199,9 +205,12 @@ class PlanetMaterialManager {
   protected async generateMaterial(
     scene: BABYLON.Scene
   ): Promise<BABYLON.Material> {
+    const statusContainer = document.getElementById("currentStatus");
+    statusContainer.innerText = "Generating texture...";
     this._raw = new BABYLON.StandardMaterial(this.name, scene);
     this._raw.wireframe = true; // hide ugly textureless sphere
     this.generateBaseTextures(256 * gpuTier).then(() => {
+      statusContainer.innerText = "Generating texture (256)...";
       this._raw.diffuseTexture = this.diffuseMap;
       this._raw.specularTexture = this.specularMap;
       this._raw.bumpTexture = this.bumpMap;
@@ -209,6 +218,7 @@ class PlanetMaterialManager {
       this._raw.wireframe = false;
 
       this.generateBaseTextures(512 * gpuTier).then(() => {
+        statusContainer.innerText = "Generating texture (512)...";
         this._raw.diffuseTexture.dispose();
         this._raw.specularTexture.dispose();
         this._raw.bumpTexture.dispose();
@@ -220,6 +230,7 @@ class PlanetMaterialManager {
 
         this.generateBaseTextures(1024 * gpuTier)
           .then(() => {
+            statusContainer.innerText = "Generating texture (1024)...";
             this._raw.diffuseTexture.dispose();
             this._raw.specularTexture.dispose();
             this._raw.bumpTexture.dispose();
@@ -229,6 +240,23 @@ class PlanetMaterialManager {
             this._raw.bumpTexture = this.bumpMap;
             this._raw.bumpTexture.level =
               +this.options.roughness > 0 ? 0.45 : 0.05;
+          })
+          .finally(() => {
+            document
+              .getElementById("screenshot")
+              ?.addEventListener("click", () => {
+                BABYLON.Tools.CreateScreenshotUsingRenderTarget(
+                  this.engine,
+                  this.camera,
+                  2500,
+                  undefined,
+                  "image/jpeg",
+                  undefined,
+                  undefined,
+                  `${this.options.terrainSeed}_${this.options.type}.jpeg`
+                );
+              });
+            statusContainer.innerText = "Done";
           })
           .catch((e) => console.error(e));
       });
@@ -257,10 +285,12 @@ class PlanetMaterialManager {
       "/textures/atmosphere.png",
       scene
     );
+
     this._rawAtmosphere.diffuseTexture = new BABYLON.Texture(
       "/textures/planetClouds1.jpg",
       scene
     );
+
     this._rawAtmosphere.diffuseTexture.level = Math.min(
       +this.options.atmosphereDensity,
       1.2
