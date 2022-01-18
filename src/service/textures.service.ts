@@ -5,6 +5,8 @@ import { NoiseSettings, PlanetOptions } from "../types/types";
 import { ColorGradientFactory } from "../utilities/color-gradient.utility";
 import { convolute } from "../utilities/convolution.utility";
 
+import { firebaseDB } from "../service/firebase.service";
+
 type BuiltTextures = {
   heightDataResult: ImageData;
   specularDataResult: ImageData;
@@ -244,7 +246,7 @@ class PlanetMaterialManager {
           .finally(() => {
             document
               .getElementById("screenshot")
-              ?.addEventListener("click", () => {
+              ?.addEventListener("click", async () => {
                 BABYLON.Tools.CreateScreenshotUsingRenderTarget(
                   this.engine,
                   this.camera,
@@ -254,6 +256,11 @@ class PlanetMaterialManager {
                   undefined,
                   undefined,
                   `${this.options.terrainSeed}_${this.options.type}.jpeg`
+                );
+                await firebaseDB.addDocument(
+                  "generated-planets",
+                  this.options.terrainSeed,
+                  {...this.options, created: (new Date() * 1000)}
                 );
               });
             statusContainer.innerText = "Done";
@@ -287,7 +294,7 @@ class PlanetMaterialManager {
     );
 
     this._rawAtmosphere.diffuseTexture = new BABYLON.Texture(
-      "/textures/planetClouds1.jpg",
+      this.options.clouds ? "/textures/planetClouds1.jpg" : "",
       scene
     );
 

@@ -3,6 +3,7 @@ import { PlanetMaterialManager } from "./textures.service";
 import { PlanetOptions } from "../types/types";
 
 import * as uuid from "uuid";
+import { anaglyphPixelShader } from "@babylonjs/core/Shaders/anaglyph.fragment";
 
 type PlanetMeshOptions = {
   subdivisions?: number;
@@ -255,6 +256,41 @@ class Planet extends BABYLON.TransformNode {
     );
     this.mesh.material = this.materialManager.raw;
     this.mesh.atmosphereMaterial = this.materialManager.rawAtmosphere;
+
+    if (this.options.moon) {
+      const moon = BABYLON.MeshBuilder.CreateSphere("moon", {}, scene);
+      moon.parent = this.mesh;
+      const moonMaterial = new BABYLON.StandardMaterial("moonmaterial", scene);
+      moonMaterial.diffuseTexture = new BABYLON.Texture(
+        "/textures/2k_moon.jpg",
+        scene
+      );
+      moonMaterial.bumpTexture = new BABYLON.Texture(
+        "/textures/2k_moon_normal.png",
+        scene
+      );
+      moon.material = moonMaterial;
+      moon.position.x = -1.2;
+      moon.position.y = 1.2;
+
+      moon.scaling.x = 0.5;
+      moon.scaling.y = 0.5;
+      moon.scaling.z = 0.5;
+    }
+
+    if (this.options.rings) {
+      var rings = BABYLON.Mesh.CreateGround("rings", 4, 4, 3, scene);
+      rings.parent = this.mesh;
+      var ringsMaterial = new BABYLON.StandardMaterial("ringsMaterial", scene);
+      ringsMaterial.diffuseTexture = new BABYLON.Texture(
+        "/textures/rings.png",
+        scene
+      );
+      ringsMaterial.diffuseTexture.hasAlpha = true;
+      ringsMaterial.backFaceCulling = false;
+      rings.material = ringsMaterial;
+      rings.receiveShadows = true;
+    }
 
     this.setInspectableProperties();
     this.setDisposeProcess();

@@ -12,6 +12,10 @@ type PlanetOptions = {
   atmosphereDensity: AtmosphericDensity;
   atmosphereColor: AtmosphericColor;
   meshOptions: { diameter: number; diameterX: number; subdivisions: number };
+  clouds: boolean;
+  rings: boolean;
+  moon: boolean;
+  distanceFromParentStar: number;
 };
 
 type NoiseSettings = Array<{

@@ -104,6 +104,10 @@ export class Game {
       atmosphereDensity: randomEnumValue(AtmosphericDensity),
       meshOptions: { diameter: 1, diameterX: 1, subdivisions: 25 },
       landMassSize: Math.floor(Math.random() * 100),
+      clouds: Math.random() < 0.5,
+      rings: Math.random() < 0.5,
+      moon: Math.random() < 0.5,
+      distanceFromParentStar: Math.random(),
     };
 
     this.planet = new Planet(
@@ -117,9 +121,9 @@ export class Game {
     // make it pretty
     this.prepareGraphicalPipeline();
 
-    // if (process.env.NODE_ENV != "production") {
-    //   this.scene.debugLayer.show({ embedMode: true, overlay: true });
-    // }
+    if (process.env.NODE_ENV != "production") {
+      this.scene.debugLayer.show({ embedMode: true, overlay: true });
+    }
     // render that biatch
     this.engine.runRenderLoop(() => this.render());
   }
