@@ -208,11 +208,12 @@ class PlanetMaterialManager {
     scene: BABYLON.Scene
   ): Promise<BABYLON.Material> {
     const statusContainer = document.getElementById("currentStatus");
-    statusContainer.innerText = "Generating texture...";
+    if (statusContainer) statusContainer.innerText = "Generating texture...";
     this._raw = new BABYLON.StandardMaterial(this.name, scene);
     this._raw.wireframe = true; // hide ugly textureless sphere
     this.generateBaseTextures(256 * gpuTier).then(() => {
-      statusContainer.innerText = "Generating texture (256)...";
+      if (statusContainer)
+        statusContainer.innerText = "Generating texture (256)...";
       this._raw.diffuseTexture = this.diffuseMap;
       this._raw.specularTexture = this.specularMap;
       this._raw.bumpTexture = this.bumpMap;
@@ -220,7 +221,8 @@ class PlanetMaterialManager {
       this._raw.wireframe = false;
 
       this.generateBaseTextures(512 * gpuTier).then(() => {
-        statusContainer.innerText = "Generating texture (512)...";
+        if (statusContainer)
+          statusContainer.innerText = "Generating texture (512)...";
         this._raw.diffuseTexture.dispose();
         this._raw.specularTexture.dispose();
         this._raw.bumpTexture.dispose();
@@ -232,7 +234,8 @@ class PlanetMaterialManager {
 
         this.generateBaseTextures(1024 * gpuTier)
           .then(() => {
-            statusContainer.innerText = "Generating texture (1024)...";
+            if (statusContainer)
+              statusContainer.innerText = "Generating texture (1024)...";
             this._raw.diffuseTexture.dispose();
             this._raw.specularTexture.dispose();
             this._raw.bumpTexture.dispose();
@@ -257,13 +260,14 @@ class PlanetMaterialManager {
                   undefined,
                   `${this.options.terrainSeed}_${this.options.type}.jpeg`
                 );
+                console.log(this._raw);
                 await firebaseDB.addDocument(
                   "generated-planets",
                   this.options.terrainSeed,
-                  {...this.options, created: (new Date() * 1000)}
+                  { ...this.options, created: new Date() * 1000 }
                 );
               });
-            statusContainer.innerText = "Done";
+            if (statusContainer) statusContainer.innerText = "Done";
           })
           .catch((e) => console.error(e));
       });

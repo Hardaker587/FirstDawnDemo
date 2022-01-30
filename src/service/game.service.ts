@@ -9,6 +9,9 @@ import { PlanetType } from "../enums/planet-type.enum";
 import { Roughness } from "../enums/roughness.enum";
 import { AtmosphericColor } from "../enums/atmospheric-color.enum";
 import { AtmosphericDensity } from "../enums/atmospheric-density.enum";
+import { GeneratorService } from "./generator.service";
+
+import { firebaseDB } from "./firebase.service";
 
 // add game object to window
 
@@ -21,16 +24,6 @@ declare global {
 interface engineOptions {
   antialias: boolean;
 }
-
-// function randomEnum<T>(anEnum: T): T[keyof T] {
-//   const enumValues = Object.keys(anEnum)
-//     .map((n) => Number.parseInt(n))
-//     .filter((n) => !Number.isNaN(n)) as unknown as T[keyof T][];
-//   const randomIndex = Math.floor(Math.random() * enumValues.length);
-//   const randomEnumValue = enumValues[randomIndex];
-//   console.log({ anEnum, randomIndex, value: enumValues[randomIndex] });
-//   return randomEnumValue;
-// }
 
 function randomEnumValue<T>(enumeration: T): T[keyof T] {
   const values = Object.keys(enumeration);
@@ -45,6 +38,7 @@ export class Game {
   camera: BABYLON.Camera;
   light: BABYLON.Light;
   planet: any;
+  renderPlanet: boolean;
 
   constructor(element: HTMLCanvasElement) {
     window.game = this;
@@ -74,6 +68,8 @@ export class Game {
       this.scene
     );
 
+    this.renderPlanet = false;
+
     //make us a skybox they said, sure I said
     var skybox = BABYLON.MeshBuilder.CreateBox(
       "skyBox",
@@ -95,28 +91,55 @@ export class Game {
 
     // insert planet m'ere
 
-    const randomPlanet: PlanetOptions = {
-      terrainSeed: uuid.v4(),
-      type: randomEnumValue(PlanetType),
-      roughness: randomEnumValue(Roughness),
-      seaLevel: Math.floor(Math.random() * 50),
-      atmosphereColor: randomEnumValue(AtmosphericColor),
-      atmosphereDensity: randomEnumValue(AtmosphericDensity),
-      meshOptions: { diameter: 1, diameterX: 1, subdivisions: 25 },
-      landMassSize: Math.floor(Math.random() * 100),
-      clouds: Math.random() < 0.5,
-      rings: Math.random() < 0.5,
-      moon: Math.random() < 0.5,
-      distanceFromParentStar: Math.random(),
-    };
+    const params = new URLSearchParams(window.location.search).get("seed");
 
-    this.planet = new Planet(
-      "planet",
-      randomPlanet,
-      this.scene,
-      this.engine,
-      this.camera
-    );
+    if (!!params) {
+      firebaseDB
+        .getOneDocument("generated-planets", params)
+        .then((res) => {
+          console.log(res);
+          this.planet = new Planet(
+            "planet",
+            res,
+            this.scene,
+            this.engine,
+            this.camera
+          );
+        })
+        .finally(() => (this.renderPlanet = true));
+    } else {
+      const options: PlanetOptions = {
+        terrainSeed: uuid.v4(),
+        type: randomEnumValue(PlanetType),
+        roughness: randomEnumValue(Roughness),
+        seaLevel: Math.floor(Math.random() * 50),
+        atmosphereColor: randomEnumValue(AtmosphericColor),
+        atmosphereDensity: randomEnumValue(AtmosphericDensity),
+        meshOptions: { diameter: 1, diameterX: 1, subdivisions: 25 },
+        landMassSize: Math.floor(Math.random() * 100),
+        clouds: Math.random() < 0.5,
+        rings: Math.random() < 0.5,
+        moon: Math.random() < 0.5,
+        distanceFromParentStar: Math.random(),
+      };
+      this.planet = new Planet(
+        "planet",
+        options,
+        this.scene,
+        this.engine,
+        this.camera
+      );
+      this.renderPlanet = true;
+    }
+
+    const generator = document.querySelector<HTMLButtonElement>("#generator");
+    generator?.addEventListener("click", () => {
+      new GeneratorService(
+        this.scene,
+        this.engine,
+        this.camera
+      ).generatePlanetForExport(1500);
+    });
 
     // make it pretty
     this.prepareGraphicalPipeline();
@@ -129,18 +152,20 @@ export class Game {
   }
 
   render() {
-    // insert planet animation m'ere
-    this.planet.rotateAround(
-      BABYLON.Vector3.Zero(),
-      new BABYLON.Vector3(0, 1, 0),
-      0.001
-    );
-    this.planet.mesh.atmosphereMesh.rotateAround(
-      BABYLON.Vector3.Zero(),
-      new BABYLON.Vector3(0, 1, 0),
-      0.0003
-    );
-    this.scene.render();
+    if (this.renderPlanet) {
+      // insert planet animation m'ere
+      this.planet.rotateAround(
+        BABYLON.Vector3.Zero(),
+        new BABYLON.Vector3(0, 1, 0),
+        0.001
+      );
+      this.planet.mesh.atmosphereMesh.rotateAround(
+        BABYLON.Vector3.Zero(),
+        new BABYLON.Vector3(0, 1, 0),
+        0.0003
+      );
+      this.scene.render();
+    }
   }
 
   prepareGraphicalPipeline(): BABYLON.DefaultRenderingPipeline {

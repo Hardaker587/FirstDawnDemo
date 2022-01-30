@@ -128,47 +128,42 @@
     "@firebase/util" "1.4.3"
     tslib "^2.1.0"
 
-"@firebase/app-compat@0.1.14":
-  version "0.1.14"
-  resolved "https://pkgs.dev.azure.com/lolilabsza/_packaging/lolilabsza/npm/registry/@firebase/app-compat/-/app-compat-0.1.14.tgz#699d364893680ed0aa4202607662b7497976b423"
-  integrity sha1-aZ02SJNoDtCqQgJgdmK3SXl2tCM=
+"@firebase/app-compat@0.1.16":
+  version "0.1.16"
+  resolved "https://pkgs.dev.azure.com/lolilabsza/_packaging/lolilabsza/npm/registry/@firebase/app-compat/-/app-compat-0.1.16.tgz#cf006b7c9639731a9f13e9d20c6a36298f73eeef"
+  integrity sha1-zwBrfJY5cxqfE+nSDGo2KY9z7u8=
   dependencies:
-    "@firebase/app" "0.7.13"
+    "@firebase/app" "0.7.15"
     "@firebase/component" "0.5.10"
     "@firebase/logger" "0.3.2"
     "@firebase/util" "1.4.3"
     tslib "^2.1.0"
-
-"@firebase/app-types@0.6.3":
-  version "0.6.3"
-  resolved "https://pkgs.dev.azure.com/lolilabsza/_packaging/lolilabsza/npm/registry/@firebase/app-types/-/app-types-0.6.3.tgz#3f10514786aad846d74cd63cb693556309918f4b"
-  integrity sha1-PxBRR4aq2EbXTNY8tpNVYwmRj0s=
 
 "@firebase/app-types@0.7.0":
   version "0.7.0"
   resolved "https://pkgs.dev.azure.com/lolilabsza/_packaging/lolilabsza/npm/registry/@firebase/app-types/-/app-types-0.7.0.tgz#c9e16d1b8bed1a991840b8d2a725fb58d0b5899f"
   integrity sha1-yeFtG4vtGpkYQLjSpyX7WNC1iZ8=
 
-"@firebase/app@0.7.13":
-  version "0.7.13"
-  resolved "https://pkgs.dev.azure.com/lolilabsza/_packaging/lolilabsza/npm/registry/@firebase/app/-/app-0.7.13.tgz#e725f8ff23a95f1e3ba2ad58308fc2ab3f16cf89"
-  integrity sha1-5yX4/yOpXx47oq1YMI/Cqz8Wz4k=
+"@firebase/app@0.7.15":
+  version "0.7.15"
+  resolved "https://pkgs.dev.azure.com/lolilabsza/_packaging/lolilabsza/npm/registry/@firebase/app/-/app-0.7.15.tgz#b437bc6a0a2f8c592fc40812084df63aa302435f"
+  integrity sha1-tDe8agovjFkvxAgSCE32OqMCQ18=
   dependencies:
     "@firebase/component" "0.5.10"
     "@firebase/logger" "0.3.2"
     "@firebase/util" "1.4.3"
     tslib "^2.1.0"
 
-"@firebase/auth-compat@0.2.5":
-  version "0.2.5"
-  resolved "https://pkgs.dev.azure.com/lolilabsza/_packaging/lolilabsza/npm/registry/@firebase/auth-compat/-/auth-compat-0.2.5.tgz#f3b08f6e90d4357c2ca44a38169a2b5a2a028fd1"
-  integrity sha1-87CPbpDUNXwspEo4FporWioCj9E=
+"@firebase/auth-compat@0.2.7":
+  version "0.2.7"
+  resolved "https://pkgs.dev.azure.com/lolilabsza/_packaging/lolilabsza/npm/registry/@firebase/auth-compat/-/auth-compat-0.2.7.tgz#9386ea64096a445c244061b9a8686389a560b7bc"
+  integrity sha1-k4bqZAlqRFwkQGG5qGhjiaVgt7w=
   dependencies:
-    "@firebase/auth" "0.19.5"
+    "@firebase/auth" "0.19.7"
     "@firebase/auth-types" "0.11.0"
     "@firebase/component" "0.5.10"
     "@firebase/util" "1.4.3"
-    node-fetch "2.6.5"
+    node-fetch "2.6.7"
     selenium-webdriver "^4.0.0-beta.2"
     tslib "^2.1.0"
 
@@ -182,15 +177,15 @@
   resolved "https://pkgs.dev.azure.com/lolilabsza/_packaging/lolilabsza/npm/registry/@firebase/auth-types/-/auth-types-0.11.0.tgz#b9c73c60ca07945b3bbd7a097633e5f78fa9e886"
   integrity sha1-ucc8YMoHlFs7vXoJdjPl94+p6IY=
 
-"@firebase/auth@0.19.5":
-  version "0.19.5"
-  resolved "https://pkgs.dev.azure.com/lolilabsza/_packaging/lolilabsza/npm/registry/@firebase/auth/-/auth-0.19.5.tgz#01130ccfb8b67abda37be2650923b9b9ce593544"
-  integrity sha1-ARMMz7i2er2je+JlCSO5uc5ZNUQ=
+"@firebase/auth@0.19.7":
+  version "0.19.7"
+  resolved "https://pkgs.dev.azure.com/lolilabsza/_packaging/lolilabsza/npm/registry/@firebase/auth/-/auth-0.19.7.tgz#0c537e3966fc95f9e79783c49242818426956c96"
+  integrity sha1-DFN+OWb8lfnnl4PEkkKBhCaVbJY=
   dependencies:
     "@firebase/component" "0.5.10"
     "@firebase/logger" "0.3.2"
     "@firebase/util" "1.4.3"
-    node-fetch "2.6.5"
+    node-fetch "2.6.7"
     selenium-webdriver "4.0.0-rc-1"
     tslib "^2.1.0"
 
@@ -214,20 +209,13 @@
     "@firebase/util" "1.4.3"
     tslib "^2.1.0"
 
-"@firebase/database-types@0.9.4":
+"@firebase/database-types@0.9.4", "@firebase/database-types@^0.9.3":
   version "0.9.4"
   resolved "https://pkgs.dev.azure.com/lolilabsza/_packaging/lolilabsza/npm/registry/@firebase/database-types/-/database-types-0.9.4.tgz#08b7da33d8dca8f5adab45bfb1cdf8654f2c6720"
   integrity sha1-CLfaM9jcqPWtq0W/sc34ZU8sZyA=
   dependencies:
     "@firebase/app-types" "0.7.0"
     "@firebase/util" "1.4.3"
-
-"@firebase/database-types@^0.7.2":
-  version "0.7.3"
-  resolved "https://pkgs.dev.azure.com/lolilabsza/_packaging/lolilabsza/npm/registry/@firebase/database-types/-/database-types-0.7.3.tgz#819f16dd4c767c864b460004458620f265a3f735"
-  integrity sha1-gZ8W3Ux2fIZLRgAERYYg8mWj9zU=
-  dependencies:
-    "@firebase/app-types" "0.6.3"
 
 "@firebase/database@0.12.5":
   version "0.12.5"
@@ -241,13 +229,13 @@
     faye-websocket "0.11.4"
     tslib "^2.1.0"
 
-"@firebase/firestore-compat@0.1.12":
-  version "0.1.12"
-  resolved "https://pkgs.dev.azure.com/lolilabsza/_packaging/lolilabsza/npm/registry/@firebase/firestore-compat/-/firestore-compat-0.1.12.tgz#f7f4fcde9460d99a013cc454e6cc3c837425f9d0"
-  integrity sha1-9/T83pRg2ZoBPMRU5sw8g3Ql+dA=
+"@firebase/firestore-compat@0.1.13":
+  version "0.1.13"
+  resolved "https://pkgs.dev.azure.com/lolilabsza/_packaging/lolilabsza/npm/registry/@firebase/firestore-compat/-/firestore-compat-0.1.13.tgz#d249d9ae92b33799ca836de7d0ba48ad0c872c8a"
+  integrity sha1-0knZrpKzN5nKg23n0LpIrQyHLIo=
   dependencies:
     "@firebase/component" "0.5.10"
-    "@firebase/firestore" "3.4.3"
+    "@firebase/firestore" "3.4.4"
     "@firebase/firestore-types" "2.5.0"
     "@firebase/util" "1.4.3"
     tslib "^2.1.0"
@@ -257,10 +245,10 @@
   resolved "https://pkgs.dev.azure.com/lolilabsza/_packaging/lolilabsza/npm/registry/@firebase/firestore-types/-/firestore-types-2.5.0.tgz#16fca40b6980fdb000de86042d7a96635f2bcdd7"
   integrity sha1-FvykC2mA/bAA3oYELXqWY18rzdc=
 
-"@firebase/firestore@3.4.3":
-  version "3.4.3"
-  resolved "https://pkgs.dev.azure.com/lolilabsza/_packaging/lolilabsza/npm/registry/@firebase/firestore/-/firestore-3.4.3.tgz#14254843eb2fb5d0d7bad7c92a9ea11b39394207"
-  integrity sha1-FCVIQ+svtdDXutfJKp6hGzk5Qgc=
+"@firebase/firestore@3.4.4":
+  version "3.4.4"
+  resolved "https://pkgs.dev.azure.com/lolilabsza/_packaging/lolilabsza/npm/registry/@firebase/firestore/-/firestore-3.4.4.tgz#6810b2b9a9fa2cafe7c1d1d83f9274e15b95268d"
+  integrity sha1-aBCyuan6LK/nwdHYP5J04VuVJo0=
   dependencies:
     "@firebase/component" "0.5.10"
     "@firebase/logger" "0.3.2"
@@ -268,16 +256,16 @@
     "@firebase/webchannel-wrapper" "0.6.1"
     "@grpc/grpc-js" "^1.3.2"
     "@grpc/proto-loader" "^0.6.0"
-    node-fetch "2.6.5"
+    node-fetch "2.6.7"
     tslib "^2.1.0"
 
-"@firebase/functions-compat@0.1.8":
-  version "0.1.8"
-  resolved "https://pkgs.dev.azure.com/lolilabsza/_packaging/lolilabsza/npm/registry/@firebase/functions-compat/-/functions-compat-0.1.8.tgz#ca29ac0970c8de0af0a49f56b1cf7f2527583d0f"
-  integrity sha1-yimsCXDI3grwpJ9Wsc9/JSdYPQ8=
+"@firebase/functions-compat@0.1.9":
+  version "0.1.9"
+  resolved "https://pkgs.dev.azure.com/lolilabsza/_packaging/lolilabsza/npm/registry/@firebase/functions-compat/-/functions-compat-0.1.9.tgz#c81b98a0b1378e234533b3552dcef9529da6c389"
+  integrity sha1-yBuYoLE3jiNFM7NVLc75Up2mw4k=
   dependencies:
     "@firebase/component" "0.5.10"
-    "@firebase/functions" "0.7.7"
+    "@firebase/functions" "0.7.8"
     "@firebase/functions-types" "0.5.0"
     "@firebase/util" "1.4.3"
     tslib "^2.1.0"
@@ -287,17 +275,17 @@
   resolved "https://pkgs.dev.azure.com/lolilabsza/_packaging/lolilabsza/npm/registry/@firebase/functions-types/-/functions-types-0.5.0.tgz#b50ba95ccce9e96f7cda453228ffe1684645625b"
   integrity sha1-tQupXMzp6W982kUyKP/haEZFYls=
 
-"@firebase/functions@0.7.7":
-  version "0.7.7"
-  resolved "https://pkgs.dev.azure.com/lolilabsza/_packaging/lolilabsza/npm/registry/@firebase/functions/-/functions-0.7.7.tgz#27c0b616847241c6008d7430b5e5b01abffb294f"
-  integrity sha1-J8C2FoRyQcYAjXQwteWwGr/7KU8=
+"@firebase/functions@0.7.8":
+  version "0.7.8"
+  resolved "https://pkgs.dev.azure.com/lolilabsza/_packaging/lolilabsza/npm/registry/@firebase/functions/-/functions-0.7.8.tgz#5cc45dddc42e8ce0fac7d8ce2f95e92bfbe33544"
+  integrity sha1-XMRd3cQujOD6x9jOL5XpK/vjNUQ=
   dependencies:
     "@firebase/app-check-interop-types" "0.1.0"
     "@firebase/auth-interop-types" "0.1.6"
     "@firebase/component" "0.5.10"
     "@firebase/messaging-interop-types" "0.1.0"
     "@firebase/util" "1.4.3"
-    node-fetch "2.6.5"
+    node-fetch "2.6.7"
     tslib "^2.1.0"
 
 "@firebase/installations@0.5.5":
@@ -317,13 +305,13 @@
   dependencies:
     tslib "^2.1.0"
 
-"@firebase/messaging-compat@0.1.6":
-  version "0.1.6"
-  resolved "https://pkgs.dev.azure.com/lolilabsza/_packaging/lolilabsza/npm/registry/@firebase/messaging-compat/-/messaging-compat-0.1.6.tgz#840069b620e51adc34e0080d72ccad4bca4b3502"
-  integrity sha1-hABptiDlGtw04AgNcsytS8pLNQI=
+"@firebase/messaging-compat@0.1.7":
+  version "0.1.7"
+  resolved "https://pkgs.dev.azure.com/lolilabsza/_packaging/lolilabsza/npm/registry/@firebase/messaging-compat/-/messaging-compat-0.1.7.tgz#db9066032bbb001f18d34d707e42f4703d3c8ffb"
+  integrity sha1-25BmAyu7AB8Y001wfkL0cD08j/s=
   dependencies:
     "@firebase/component" "0.5.10"
-    "@firebase/messaging" "0.9.6"
+    "@firebase/messaging" "0.9.7"
     "@firebase/util" "1.4.3"
     tslib "^2.1.0"
 
@@ -332,10 +320,10 @@
   resolved "https://pkgs.dev.azure.com/lolilabsza/_packaging/lolilabsza/npm/registry/@firebase/messaging-interop-types/-/messaging-interop-types-0.1.0.tgz#bdac02dd31edd5cb9eec37b1db698ea5e2c1a631"
   integrity sha1-vawC3THt1cue7Dex22mOpeLBpjE=
 
-"@firebase/messaging@0.9.6":
-  version "0.9.6"
-  resolved "https://pkgs.dev.azure.com/lolilabsza/_packaging/lolilabsza/npm/registry/@firebase/messaging/-/messaging-0.9.6.tgz#935e8cb46ba1dcbb7dabe877d1f94a874a3813aa"
-  integrity sha1-k16MtGuh3Lt9q+h30flKh0o4E6o=
+"@firebase/messaging@0.9.7":
+  version "0.9.7"
+  resolved "https://pkgs.dev.azure.com/lolilabsza/_packaging/lolilabsza/npm/registry/@firebase/messaging/-/messaging-0.9.7.tgz#fa4e566f3632d3437cbc667c7755ed0c83ee38a2"
+  integrity sha1-+k5WbzYy00N8vGZ8d1XtDIPuOKI=
   dependencies:
     "@firebase/component" "0.5.10"
     "@firebase/installations" "0.5.5"
@@ -409,13 +397,13 @@
     "@firebase/util" "1.4.3"
     tslib "^2.1.0"
 
-"@firebase/storage-compat@0.1.9":
-  version "0.1.9"
-  resolved "https://pkgs.dev.azure.com/lolilabsza/_packaging/lolilabsza/npm/registry/@firebase/storage-compat/-/storage-compat-0.1.9.tgz#c731f6bea4e7927c1343e369a480a924555bb5f4"
-  integrity sha1-xzH2vqTnknwTQ+NppICpJFVbtfQ=
+"@firebase/storage-compat@0.1.10":
+  version "0.1.10"
+  resolved "https://pkgs.dev.azure.com/lolilabsza/_packaging/lolilabsza/npm/registry/@firebase/storage-compat/-/storage-compat-0.1.10.tgz#94a7fbe89e901f4cd0d8fbec4be554186f897fea"
+  integrity sha1-lKf76J6QH0zQ2PvsS+VUGG+Jf+o=
   dependencies:
     "@firebase/component" "0.5.10"
-    "@firebase/storage" "0.9.1"
+    "@firebase/storage" "0.9.2"
     "@firebase/storage-types" "0.6.0"
     "@firebase/util" "1.4.3"
     tslib "^2.1.0"
@@ -425,14 +413,14 @@
   resolved "https://pkgs.dev.azure.com/lolilabsza/_packaging/lolilabsza/npm/registry/@firebase/storage-types/-/storage-types-0.6.0.tgz#0b1af64a2965af46fca138e5b70700e9b7e6312a"
   integrity sha1-Cxr2Sillr0b8oTjltwcA6bfmMSo=
 
-"@firebase/storage@0.9.1":
-  version "0.9.1"
-  resolved "https://pkgs.dev.azure.com/lolilabsza/_packaging/lolilabsza/npm/registry/@firebase/storage/-/storage-0.9.1.tgz#0b642b68868f54c41dfd44c36191a577d1d5bf6a"
-  integrity sha1-C2QraIaPVMQd/UTDYZGld9HVv2o=
+"@firebase/storage@0.9.2":
+  version "0.9.2"
+  resolved "https://pkgs.dev.azure.com/lolilabsza/_packaging/lolilabsza/npm/registry/@firebase/storage/-/storage-0.9.2.tgz#ca7bd034a45a9ec41412238eb82fe9413b1b4653"
+  integrity sha1-ynvQNKRansQUEiOOuC/pQTsbRlM=
   dependencies:
     "@firebase/component" "0.5.10"
     "@firebase/util" "1.4.3"
-    node-fetch "2.6.5"
+    node-fetch "2.6.7"
     tslib "^2.1.0"
 
 "@firebase/util@1.4.3":
@@ -477,7 +465,7 @@
     google-gax "^2.24.1"
     protobufjs "^6.8.6"
 
-"@google-cloud/paginator@^3.0.0":
+"@google-cloud/paginator@^3.0.0", "@google-cloud/paginator@^3.0.6":
   version "3.0.6"
   resolved "https://pkgs.dev.azure.com/lolilabsza/_packaging/lolilabsza/npm/registry/@google-cloud/paginator/-/paginator-3.0.6.tgz#02a59dccd348d515069779a4f77a4a4fd15594da"
   integrity sha1-AqWdzNNI1RUGl3mk93pKT9FVlNo=
@@ -500,23 +488,23 @@
   resolved "https://pkgs.dev.azure.com/lolilabsza/_packaging/lolilabsza/npm/registry/@google-cloud/promisify/-/promisify-2.0.4.tgz#9d8705ecb2baa41b6b2673f3a8e9b7b7e1abc52a"
   integrity sha1-nYcF7LK6pBtrJnPzqOm3t+GrxSo=
 
-"@google-cloud/pubsub@^2.7.0":
-  version "2.18.4"
-  resolved "https://pkgs.dev.azure.com/lolilabsza/_packaging/lolilabsza/npm/registry/@google-cloud/pubsub/-/pubsub-2.18.4.tgz#41b56cd428d51c6a699b7515af86d9c22ea94a4a"
-  integrity sha1-QbVs1CjVHGppm3UVr4bZwi6pSko=
+"@google-cloud/pubsub@^2.18.4":
+  version "2.18.5"
+  resolved "https://pkgs.dev.azure.com/lolilabsza/_packaging/lolilabsza/npm/registry/@google-cloud/pubsub/-/pubsub-2.18.5.tgz#1ea040c629ecc8cf256453b14c7ee3d98dc8a270"
+  integrity sha1-HqBAxinsyM8lZFOxTH7j2Y3IonA=
   dependencies:
-    "@google-cloud/paginator" "^3.0.0"
+    "@google-cloud/paginator" "^3.0.6"
     "@google-cloud/precise-date" "^2.0.0"
     "@google-cloud/projectify" "^2.0.0"
     "@google-cloud/promisify" "^2.0.0"
     "@opentelemetry/api" "^1.0.0"
-    "@opentelemetry/semantic-conventions" "^0.24.0"
+    "@opentelemetry/semantic-conventions" "^1.0.0"
     "@types/duplexify" "^3.6.0"
     "@types/long" "^4.0.0"
     arrify "^2.0.0"
     extend "^3.0.2"
     google-auth-library "^7.0.0"
-    google-gax "2.28.1"
+    google-gax "2.29.4"
     is-stream-ended "^0.1.4"
     lodash.snakecase "^4.1.1"
     p-defer "^3.0.0"
@@ -553,14 +541,6 @@
   version "1.5.1"
   resolved "https://pkgs.dev.azure.com/lolilabsza/_packaging/lolilabsza/npm/registry/@grpc/grpc-js/-/grpc-js-1.5.1.tgz#934571ae351e868e61d2bd1d56249b79ce8bd1f5"
   integrity sha1-k0VxrjUeho5h0r0dViSbec6L0fU=
-  dependencies:
-    "@grpc/proto-loader" "^0.6.4"
-    "@types/node" ">=12.12.47"
-
-"@grpc/grpc-js@~1.4.0":
-  version "1.4.6"
-  resolved "https://pkgs.dev.azure.com/lolilabsza/_packaging/lolilabsza/npm/registry/@grpc/grpc-js/-/grpc-js-1.4.6.tgz#8108d7ab7c0c21b38c538c1a48583edbbf2c2412"
-  integrity sha1-gQjXq3wMIbOMU4waSFg+278sJBI=
   dependencies:
     "@grpc/proto-loader" "^0.6.4"
     "@types/node" ">=12.12.47"
@@ -602,10 +582,10 @@
   resolved "https://pkgs.dev.azure.com/lolilabsza/_packaging/lolilabsza/npm/registry/@opentelemetry/api/-/api-1.0.4.tgz#a167e46c10d05a07ab299fc518793b0cff8f6924"
   integrity sha1-oWfkbBDQWgerKZ/FGHk7DP+PaSQ=
 
-"@opentelemetry/semantic-conventions@^0.24.0":
-  version "0.24.0"
-  resolved "https://pkgs.dev.azure.com/lolilabsza/_packaging/lolilabsza/npm/registry/@opentelemetry/semantic-conventions/-/semantic-conventions-0.24.0.tgz#1028ef0e0923b24916158d80d2ddfd67ea8b6740"
-  integrity sha1-ECjvDgkjskkWFY2A0t39Z+qLZ0A=
+"@opentelemetry/semantic-conventions@^1.0.0":
+  version "1.0.1"
+  resolved "https://pkgs.dev.azure.com/lolilabsza/_packaging/lolilabsza/npm/registry/@opentelemetry/semantic-conventions/-/semantic-conventions-1.0.1.tgz#9349c3860a53468fa2108b5df09aa843f22dbf94"
+  integrity sha1-k0nDhgpTRo+iEItd8JqoQ/Itv5Q=
 
 "@panva/asn1.js@^1.0.0":
   version "1.0.0"
@@ -687,13 +667,6 @@
   resolved "https://pkgs.dev.azure.com/lolilabsza/_packaging/lolilabsza/npm/registry/@tootallnate/once/-/once-2.0.0.tgz#f544a148d3ab35801c1f633a7441fd87c2e484bf"
   integrity sha1-9UShSNOrNYAcH2M6dEH9h8LkhL8=
 
-"@types/archiver@^5.1.0":
-  version "5.3.1"
-  resolved "https://pkgs.dev.azure.com/lolilabsza/_packaging/lolilabsza/npm/registry/@types/archiver/-/archiver-5.3.1.tgz#02991e940a03dd1a32678fead4b4ca03d0e387ca"
-  integrity sha1-ApkelAoD3RoyZ4/q1LTKA9Djh8o=
-  dependencies:
-    "@types/glob" "*"
-
 "@types/body-parser@*":
   version "1.19.2"
   resolved "https://pkgs.dev.azure.com/lolilabsza/_packaging/lolilabsza/npm/registry/@types/body-parser/-/body-parser-1.19.2.tgz#aea2059e28b7658639081347ac4fab3de166e6f0"
@@ -764,14 +737,6 @@
     "@types/express-serve-static-core" "*"
     "@types/serve-static" "*"
 
-"@types/glob@*":
-  version "7.2.0"
-  resolved "https://pkgs.dev.azure.com/lolilabsza/_packaging/lolilabsza/npm/registry/@types/glob/-/glob-7.2.0.tgz#bc1b5bf3aa92f25bd5dd39f35c57361bdce5b2eb"
-  integrity sha1-vBtb86qS8lvV3TnzXFc2G9zlsus=
-  dependencies:
-    "@types/minimatch" "*"
-    "@types/node" "*"
-
 "@types/json-schema@^7.0.6":
   version "7.0.9"
   resolved "https://pkgs.dev.azure.com/lolilabsza/_packaging/lolilabsza/npm/registry/@types/json-schema/-/json-schema-7.0.9.tgz#97edc9037ea0c38585320b28964dde3b39e4660d"
@@ -786,11 +751,6 @@
   version "1.3.2"
   resolved "https://pkgs.dev.azure.com/lolilabsza/_packaging/lolilabsza/npm/registry/@types/mime/-/mime-1.3.2.tgz#93e25bf9ee75fe0fd80b594bc4feb0e862111b5a"
   integrity sha1-k+Jb+e51/g/YC1lLxP6w6GIRG1o=
-
-"@types/minimatch@*":
-  version "3.0.5"
-  resolved "https://pkgs.dev.azure.com/lolilabsza/_packaging/lolilabsza/npm/registry/@types/minimatch/-/minimatch-3.0.5.tgz#1001cc5e6a3704b83c236027e77f2f58ea010f40"
-  integrity sha1-EAHMXmo3BLg8I2An538vWOoBD0A=
 
 "@types/node@*", "@types/node@>=12.12.47", "@types/node@>=13.7.0":
   version "17.0.9"
@@ -814,14 +774,6 @@
   dependencies:
     "@types/mime" "^1"
     "@types/node" "*"
-
-JSONStream@^1.2.1:
-  version "1.3.5"
-  resolved "https://pkgs.dev.azure.com/lolilabsza/_packaging/lolilabsza/npm/registry/JSONStream/-/JSONStream-1.3.5.tgz#3208c1f08d3a4d99261ab64f92302bc15e111ca0"
-  integrity sha1-MgjB8I06TZkmGrZPkjArwV4RHKA=
-  dependencies:
-    jsonparse "^1.2.0"
-    through ">=2.2.7 <3"
 
 abbrev@1:
   version "1.1.1"
@@ -867,7 +819,14 @@ aggregate-error@^3.0.0:
     clean-stack "^2.0.0"
     indent-string "^4.0.0"
 
-ajv@^6.12.2, ajv@^6.12.3, ajv@^6.12.6:
+ajv-formats@^2.1.0:
+  version "2.1.1"
+  resolved "https://pkgs.dev.azure.com/lolilabsza/_packaging/lolilabsza/npm/registry/ajv-formats/-/ajv-formats-2.1.1.tgz#6e669400659eb74973bbf2e33327180a0996b520"
+  integrity sha1-bmaUAGWet0lzu/LjMycYCgmWtSA=
+  dependencies:
+    ajv "^8.0.0"
+
+ajv@^6.12.3, ajv@^6.12.6:
   version "6.12.6"
   resolved "https://pkgs.dev.azure.com/lolilabsza/_packaging/lolilabsza/npm/registry/ajv/-/ajv-6.12.6.tgz#baf5a62e802b07d977034586f8c3baf5adf26df4"
   integrity sha1-uvWmLoArB9l3A0WG+MO69a3ybfQ=
@@ -877,6 +836,16 @@ ajv@^6.12.2, ajv@^6.12.3, ajv@^6.12.6:
     json-schema-traverse "^0.4.1"
     uri-js "^4.2.2"
 
+ajv@^8.0.0, ajv@^8.3.0:
+  version "8.9.0"
+  resolved "https://pkgs.dev.azure.com/lolilabsza/_packaging/lolilabsza/npm/registry/ajv/-/ajv-8.9.0.tgz#738019146638824dea25edcf299dcba1b0e7eb18"
+  integrity sha1-c4AZFGY4gk3qJe3PKZ3LobDn6xg=
+  dependencies:
+    fast-deep-equal "^3.1.1"
+    json-schema-traverse "^1.0.0"
+    require-from-string "^2.0.2"
+    uri-js "^4.2.2"
+
 ansi-align@^3.0.0:
   version "3.0.1"
   resolved "https://pkgs.dev.azure.com/lolilabsza/_packaging/lolilabsza/npm/registry/ansi-align/-/ansi-align-3.0.1.tgz#0cdf12e111ace773a86e9a1fad1225c43cb19a59"
@@ -884,25 +853,22 @@ ansi-align@^3.0.0:
   dependencies:
     string-width "^4.1.0"
 
-ansi-escapes@^3.1.0, ansi-escapes@^3.2.0:
+ansi-escapes@^3.1.0:
   version "3.2.0"
   resolved "https://pkgs.dev.azure.com/lolilabsza/_packaging/lolilabsza/npm/registry/ansi-escapes/-/ansi-escapes-3.2.0.tgz#8780b98ff9dbf5638152d1f1fe5c1d7b4442976b"
   integrity sha1-h4C5j/nb9WOBUtHx/lwde0RCl2s=
+
+ansi-escapes@^4.2.1:
+  version "4.3.2"
+  resolved "https://pkgs.dev.azure.com/lolilabsza/_packaging/lolilabsza/npm/registry/ansi-escapes/-/ansi-escapes-4.3.2.tgz#6b2291d1db7d98b6521d5f1efa42d0f3a9feb65e"
+  integrity sha1-ayKR0dt9mLZSHV8e+kLQ86n+tl4=
+  dependencies:
+    type-fest "^0.21.3"
 
 ansi-regex@^2.0.0, ansi-regex@^2.1.1:
   version "2.1.1"
   resolved "https://pkgs.dev.azure.com/lolilabsza/_packaging/lolilabsza/npm/registry/ansi-regex/-/ansi-regex-2.1.1.tgz#c3b33ab5ee360d86e0e628f0468ae7ef27d654df"
   integrity sha1-w7M6te42DYbg5ijwRorn7yfWVN8=
-
-ansi-regex@^3.0.0:
-  version "3.0.0"
-  resolved "https://pkgs.dev.azure.com/lolilabsza/_packaging/lolilabsza/npm/registry/ansi-regex/-/ansi-regex-3.0.0.tgz#ed0317c322064f79466c02966bddb605ab37d998"
-  integrity sha1-7QMXwyIGT3lGbAKWa922Bas32Zg=
-
-ansi-regex@^4.1.0:
-  version "4.1.0"
-  resolved "https://pkgs.dev.azure.com/lolilabsza/_packaging/lolilabsza/npm/registry/ansi-regex/-/ansi-regex-4.1.0.tgz#8b9f8f08cf1acb843756a839ca8c7e3168c51997"
-  integrity sha1-i5+PCM8ay4Q3Vqg5yox+MWjFGZc=
 
 ansi-regex@^5.0.1:
   version "5.0.1"
@@ -1139,7 +1105,7 @@ binary@~0.3.0:
     buffers "~0.1.1"
     chainsaw "~0.1.0"
 
-bl@^4.0.3:
+bl@^4.0.3, bl@^4.1.0:
   version "4.1.0"
   resolved "https://pkgs.dev.azure.com/lolilabsza/_packaging/lolilabsza/npm/registry/bl/-/bl-4.1.0.tgz#451535264182bec2fbbc83a62ab98cf11d9f7b3a"
   integrity sha1-RRU1JkGCvsL7vIOmKrmM8R2fezo=
@@ -1174,15 +1140,15 @@ body-parser@1.19.1, body-parser@^1.18.3, body-parser@^1.19.0:
     raw-body "2.4.2"
     type-is "~1.6.18"
 
-boring-firebase@^1.2.18:
-  version "1.2.18"
-  resolved "https://pkgs.dev.azure.com/lolilabsza/_packaging/lolilabsza/npm/registry/boring-firebase/-/boring-firebase-1.2.18.tgz#ed7cd3e113243dcecc5ca686658859c12b9643fb"
-  integrity sha1-7XzT4RMkPc7MXKaGZYhZwSuWQ/s=
+boring-firebase@^1.2.25:
+  version "1.2.25"
+  resolved "https://pkgs.dev.azure.com/lolilabsza/_packaging/lolilabsza/npm/registry/boring-firebase/-/boring-firebase-1.2.25.tgz#712b9c28feebc75d5de5dc3d4109d95147998f99"
+  integrity sha1-cSucKP7rx11d5dw9QQnZUUeZj5k=
   dependencies:
-    firebase "^9.4.1"
-    firebase-admin "^10.0.0"
-    firebase-functions "^3.16.0"
-    firebase-tools "^9.22.0"
+    firebase "~9.6"
+    firebase-admin "~10.0"
+    firebase-functions "~3.16"
+    firebase-tools "~10.1"
 
 boxen@^4.2.0:
   version "4.2.0"
@@ -1356,7 +1322,7 @@ chalk@^1.1.3:
     strip-ansi "^3.0.0"
     supports-color "^2.0.0"
 
-chalk@^2.0.1, chalk@^2.4.1, chalk@^2.4.2:
+chalk@^2.4.1:
   version "2.4.2"
   resolved "https://pkgs.dev.azure.com/lolilabsza/_packaging/lolilabsza/npm/registry/chalk/-/chalk-2.4.2.tgz#cd42541677a54333cf541a49108c1432b44c9424"
   integrity sha1-zUJUFnelQzPPVBpJEIwUMrRMlCQ=
@@ -1373,7 +1339,7 @@ chalk@^3.0.0:
     ansi-styles "^4.1.0"
     supports-color "^7.1.0"
 
-chalk@^4.1.0:
+chalk@^4.1.0, chalk@^4.1.1:
   version "4.1.2"
   resolved "https://pkgs.dev.azure.com/lolilabsza/_packaging/lolilabsza/npm/registry/chalk/-/chalk-4.1.2.tgz#aac4e2b7734a740867aeb16bf02aad556a1e7a01"
   integrity sha1-qsTit3NKdAhnrrFr8CqtVWoeegE=
@@ -1400,11 +1366,6 @@ chokidar@^3.0.2:
     readdirp "~3.6.0"
   optionalDependencies:
     fsevents "~2.3.2"
-
-chownr@^1.1.4:
-  version "1.1.4"
-  resolved "https://pkgs.dev.azure.com/lolilabsza/_packaging/lolilabsza/npm/registry/chownr/-/chownr-1.1.4.tgz#6fc9d7b42d32a583596337666e7d08084da2cc6b"
-  integrity sha1-b8nXtC0ypYNZYzdmbn0ICE2izGs=
 
 chownr@^2.0.0:
   version "2.0.0"
@@ -1445,14 +1406,14 @@ cli-color@^1.2.0:
     memoizee "^0.4.14"
     timers-ext "^0.1.5"
 
-cli-cursor@^2.1.0:
-  version "2.1.0"
-  resolved "https://pkgs.dev.azure.com/lolilabsza/_packaging/lolilabsza/npm/registry/cli-cursor/-/cli-cursor-2.1.0.tgz#b35dac376479facc3e94747d41d0d0f5238ffcb5"
-  integrity sha1-s12sN2R5+sw+lHR9QdDQ9SOP/LU=
+cli-cursor@^3.1.0:
+  version "3.1.0"
+  resolved "https://pkgs.dev.azure.com/lolilabsza/_packaging/lolilabsza/npm/registry/cli-cursor/-/cli-cursor-3.1.0.tgz#264305a7ae490d1d03bf0c9ba7c925d1753af307"
+  integrity sha1-JkMFp65JDR0Dvwybp8kl0XU68wc=
   dependencies:
-    restore-cursor "^2.0.0"
+    restore-cursor "^3.1.0"
 
-cli-spinners@^2.0.0:
+cli-spinners@^2.5.0:
   version "2.6.1"
   resolved "https://pkgs.dev.azure.com/lolilabsza/_packaging/lolilabsza/npm/registry/cli-spinners/-/cli-spinners-2.6.1.tgz#adc954ebe281c37a6319bfa401e6dd2488ffb70d"
   integrity sha1-rclU6+KBw3pjGb+kAebdJIj/tw0=
@@ -1464,10 +1425,10 @@ cli-table@0.3.11, cli-table@^0.3.1:
   dependencies:
     colors "1.0.3"
 
-cli-width@^2.0.0:
-  version "2.2.1"
-  resolved "https://pkgs.dev.azure.com/lolilabsza/_packaging/lolilabsza/npm/registry/cli-width/-/cli-width-2.2.1.tgz#b0433d0b4e9c847ef18868a4ef16fd5fc8271c48"
-  integrity sha1-sEM9C06chH7xiGik7xb9X8gnHEg=
+cli-width@^3.0.0:
+  version "3.0.0"
+  resolved "https://pkgs.dev.azure.com/lolilabsza/_packaging/lolilabsza/npm/registry/cli-width/-/cli-width-3.0.0.tgz#a2f48437a2caa9a22436e794bf071ec9e61cedf6"
+  integrity sha1-ovSEN6LKqaIkNueUvwceyeYc7fY=
 
 cliui@^7.0.2:
   version "7.0.4"
@@ -1727,12 +1688,10 @@ crypto-random-string@^2.0.0:
   resolved "https://pkgs.dev.azure.com/lolilabsza/_packaging/lolilabsza/npm/registry/crypto-random-string/-/crypto-random-string-2.0.0.tgz#ef2a7a966ec11083388369baa02ebead229b30d5"
   integrity sha1-7yp6lm7BEIM4g2m6oC6+rSKbMNU=
 
-csv-streamify@^3.0.4:
-  version "3.0.4"
-  resolved "https://pkgs.dev.azure.com/lolilabsza/_packaging/lolilabsza/npm/registry/csv-streamify/-/csv-streamify-3.0.4.tgz#4cb614c57e3f299cca17b63fdcb4ad167777f47a"
-  integrity sha1-TLYUxX4/KZzKF7Y/3LStFnd39Ho=
-  dependencies:
-    through2 "2.0.1"
+csv-parse@^5.0.4:
+  version "5.0.4"
+  resolved "https://pkgs.dev.azure.com/lolilabsza/_packaging/lolilabsza/npm/registry/csv-parse/-/csv-parse-5.0.4.tgz#97e5e654413bcf95f2714ce09bcb2be6de0eb8e3"
+  integrity sha1-l+XmVEE7z5XycUzgm8sr5t4OuOM=
 
 d@1, d@^1.0.1:
   version "1.0.1"
@@ -2200,26 +2159,27 @@ events-listener@^1.1.0:
   resolved "https://pkgs.dev.azure.com/lolilabsza/_packaging/lolilabsza/npm/registry/events-listener/-/events-listener-1.1.0.tgz#dd49b4628480eba58fde31b870ee346b3990b349"
   integrity sha1-3Um0YoSA66WP3jG4cO40azmQs0k=
 
-exegesis-express@^2.0.0:
-  version "2.0.1"
-  resolved "https://pkgs.dev.azure.com/lolilabsza/_packaging/lolilabsza/npm/registry/exegesis-express/-/exegesis-express-2.0.1.tgz#f162cdd68ee93dc14d832b02b1dbeab053697ee9"
-  integrity sha1-8WLN1o7pPcFNgysCsdvqsFNpfuk=
+exegesis-express@^4.0.0:
+  version "4.0.0"
+  resolved "https://pkgs.dev.azure.com/lolilabsza/_packaging/lolilabsza/npm/registry/exegesis-express/-/exegesis-express-4.0.0.tgz#f5f8486f6f0d81739e8e27ce75ce0f61ba3f3578"
+  integrity sha1-9fhIb28NgXOejifOdc4PYbo/NXg=
   dependencies:
-    exegesis "^2.5.7"
+    exegesis "^4.1.0"
 
-exegesis@^2.5.7:
-  version "2.5.7"
-  resolved "https://pkgs.dev.azure.com/lolilabsza/_packaging/lolilabsza/npm/registry/exegesis/-/exegesis-2.5.7.tgz#232c4b01361bc2bf0d9d4c07549c479e77f2b7a3"
-  integrity sha1-IyxLATYbwr8NnUwHVJxHnnfyt6M=
+exegesis@^4.1.0:
+  version "4.1.0"
+  resolved "https://pkgs.dev.azure.com/lolilabsza/_packaging/lolilabsza/npm/registry/exegesis/-/exegesis-4.1.0.tgz#e32c55fe42e6e4efacaebd084b3c7a8714d04442"
+  integrity sha1-4yxV/kLm5O+srr0ISzx6hxTQREI=
   dependencies:
     "@apidevtools/json-schema-ref-parser" "^9.0.3"
-    ajv "^6.12.2"
+    ajv "^8.3.0"
+    ajv-formats "^2.1.0"
     body-parser "^1.18.3"
     content-type "^1.0.4"
     deep-freeze "0.0.1"
     events-listener "^1.1.0"
     glob "^7.1.3"
-    json-ptr "^2.2.0"
+    json-ptr "^3.0.1"
     json-schema-traverse "^1.0.0"
     lodash "^4.17.11"
     openapi3-ts "^2.0.1"
@@ -2345,10 +2305,10 @@ fecha@^4.2.0:
   resolved "https://pkgs.dev.azure.com/lolilabsza/_packaging/lolilabsza/npm/registry/fecha/-/fecha-4.2.1.tgz#0a83ad8f86ef62a091e22bb5a039cd03d23eecce"
   integrity sha1-CoOtj4bvYqCR4iu1oDnNA9I+7M4=
 
-figures@^2.0.0:
-  version "2.0.0"
-  resolved "https://pkgs.dev.azure.com/lolilabsza/_packaging/lolilabsza/npm/registry/figures/-/figures-2.0.0.tgz#3ab1a2d2a62c8bfb431a0c94cb797a2fce27c962"
-  integrity sha1-OrGi0qYsi/tDGgyUy3l6L84nyWI=
+figures@^3.0.0:
+  version "3.2.0"
+  resolved "https://pkgs.dev.azure.com/lolilabsza/_packaging/lolilabsza/npm/registry/figures/-/figures-3.2.0.tgz#625c18bd293c604dc4a8ddb2febf0c88341746af"
+  integrity sha1-YlwYvSk8YE3EqN2y/r8MiDQXRq8=
   dependencies:
     escape-string-regexp "^1.0.5"
 
@@ -2382,23 +2342,23 @@ finalhandler@1.1.2, finalhandler@~1.1.2:
     statuses "~1.5.0"
     unpipe "~1.0.0"
 
-firebase-admin@^10.0.0:
-  version "10.0.1"
-  resolved "https://pkgs.dev.azure.com/lolilabsza/_packaging/lolilabsza/npm/registry/firebase-admin/-/firebase-admin-10.0.1.tgz#dae1f3d2f75049b88d8255a390e7e4bedec85146"
-  integrity sha1-2uHz0vdQSbiNglWjkOfkvt7IUUY=
+firebase-admin@~10.0:
+  version "10.0.2"
+  resolved "https://pkgs.dev.azure.com/lolilabsza/_packaging/lolilabsza/npm/registry/firebase-admin/-/firebase-admin-10.0.2.tgz#d1142fb40738fa9b62f6625c4e3fc8cbc0ba61c6"
+  integrity sha1-0RQvtAc4+pti9mJcTj/Iy8C6YcY=
   dependencies:
     "@firebase/database-compat" "^0.1.1"
-    "@firebase/database-types" "^0.7.2"
+    "@firebase/database-types" "^0.9.3"
     "@types/node" ">=12.12.47"
     dicer "^0.3.0"
     jsonwebtoken "^8.5.1"
     jwks-rsa "^2.0.2"
-    node-forge "^0.10.0"
+    node-forge "^1.0.0"
   optionalDependencies:
     "@google-cloud/firestore" "^4.5.0"
     "@google-cloud/storage" "^5.3.0"
 
-firebase-functions@^3.16.0:
+firebase-functions@~3.16:
   version "3.16.0"
   resolved "https://pkgs.dev.azure.com/lolilabsza/_packaging/lolilabsza/npm/registry/firebase-functions/-/firebase-functions-3.16.0.tgz#603e47c2a563a5d0d1bc28f7362d0349c2f0d33f"
   integrity sha1-YD5HwqVjpdDRvCj3Ni0DScLw0z8=
@@ -2409,14 +2369,12 @@ firebase-functions@^3.16.0:
     express "^4.17.1"
     lodash "^4.17.14"
 
-firebase-tools@^9.22.0:
-  version "9.23.3"
-  resolved "https://pkgs.dev.azure.com/lolilabsza/_packaging/lolilabsza/npm/registry/firebase-tools/-/firebase-tools-9.23.3.tgz#a20d0b17bbac07a220faafe8ee37cf36ea07c358"
-  integrity sha1-og0LF7usB6Ig+q/o7jfPNuoHw1g=
+firebase-tools@~10.1:
+  version "10.1.2"
+  resolved "https://pkgs.dev.azure.com/lolilabsza/_packaging/lolilabsza/npm/registry/firebase-tools/-/firebase-tools-10.1.2.tgz#7ed235dc8739aaf5047aa0437eba1765d724d52a"
+  integrity sha1-ftI13Ic5qvUEeqBDfroXZdck1So=
   dependencies:
-    "@google-cloud/pubsub" "^2.7.0"
-    "@types/archiver" "^5.1.0"
-    JSONStream "^1.2.1"
+    "@google-cloud/pubsub" "^2.18.4"
     abort-controller "^3.0.0"
     ajv "^6.12.6"
     archiver "^5.0.0"
@@ -2430,37 +2388,39 @@ firebase-tools@^9.22.0:
     cors "^2.8.5"
     cross-env "^5.1.3"
     cross-spawn "^7.0.1"
-    csv-streamify "^3.0.4"
+    csv-parse "^5.0.4"
     dotenv "^6.1.0"
-    exegesis "^2.5.7"
-    exegesis-express "^2.0.0"
+    exegesis "^4.1.0"
+    exegesis-express "^4.0.0"
     exit-code "^1.0.2"
     express "^4.16.4"
     filesize "^6.1.0"
     fs-extra "^5.0.0"
     glob "^7.1.2"
-    google-auth-library "^6.1.3"
-    inquirer "~6.3.1"
+    google-auth-library "^7.11.0"
+    inquirer "^8.2.0"
     js-yaml "^3.13.1"
     jsonwebtoken "^8.5.1"
     leven "^3.1.0"
     lodash "^4.17.21"
-    marked "^0.7.0"
+    marked "^4.0.10"
     marked-terminal "^3.3.0"
     mime "^2.5.2"
     minimatch "^3.0.4"
     morgan "^1.10.0"
     node-fetch "^2.6.1"
     open "^6.3.0"
-    ora "^3.4.0"
+    ora "^5.4.1"
     portfinder "^1.0.23"
     progress "^2.0.3"
     proxy-agent "^5.0.0"
     request "^2.87.0"
     rimraf "^3.0.0"
     semver "^5.7.1"
+    stream-chain "^2.2.4"
+    stream-json "^1.7.3"
     superstatic "^7.1.0"
-    tar "^4.3.0"
+    tar "^6.1.11"
     tcp-port-used "^1.0.1"
     tmp "0.0.33"
     triple-beam "^1.3.0"
@@ -2473,36 +2433,36 @@ firebase-tools@^9.22.0:
     winston-transport "^4.4.0"
     ws "^7.2.3"
 
-firebase@^9.4.1:
-  version "9.6.3"
-  resolved "https://pkgs.dev.azure.com/lolilabsza/_packaging/lolilabsza/npm/registry/firebase/-/firebase-9.6.3.tgz#fe22c94369eb50eba9d15e8ba2edb7100d5c1ed4"
-  integrity sha1-/iLJQ2nrUOup0V6Lou23EA1cHtQ=
+firebase@~9.6:
+  version "9.6.5"
+  resolved "https://pkgs.dev.azure.com/lolilabsza/_packaging/lolilabsza/npm/registry/firebase/-/firebase-9.6.5.tgz#cf664a953e85f8c7013783db9be21f063877ca9b"
+  integrity sha1-z2ZKlT6F+McBN4Pbm+IfBjh3yps=
   dependencies:
     "@firebase/analytics" "0.7.5"
     "@firebase/analytics-compat" "0.1.6"
-    "@firebase/app" "0.7.13"
+    "@firebase/app" "0.7.15"
     "@firebase/app-check" "0.5.3"
     "@firebase/app-check-compat" "0.2.3"
-    "@firebase/app-compat" "0.1.14"
+    "@firebase/app-compat" "0.1.16"
     "@firebase/app-types" "0.7.0"
-    "@firebase/auth" "0.19.5"
-    "@firebase/auth-compat" "0.2.5"
+    "@firebase/auth" "0.19.7"
+    "@firebase/auth-compat" "0.2.7"
     "@firebase/database" "0.12.5"
     "@firebase/database-compat" "0.1.5"
-    "@firebase/firestore" "3.4.3"
-    "@firebase/firestore-compat" "0.1.12"
-    "@firebase/functions" "0.7.7"
-    "@firebase/functions-compat" "0.1.8"
+    "@firebase/firestore" "3.4.4"
+    "@firebase/firestore-compat" "0.1.13"
+    "@firebase/functions" "0.7.8"
+    "@firebase/functions-compat" "0.1.9"
     "@firebase/installations" "0.5.5"
-    "@firebase/messaging" "0.9.6"
-    "@firebase/messaging-compat" "0.1.6"
+    "@firebase/messaging" "0.9.7"
+    "@firebase/messaging-compat" "0.1.7"
     "@firebase/performance" "0.5.5"
     "@firebase/performance-compat" "0.1.5"
     "@firebase/polyfill" "0.3.36"
     "@firebase/remote-config" "0.3.4"
     "@firebase/remote-config-compat" "0.1.5"
-    "@firebase/storage" "0.9.1"
-    "@firebase/storage-compat" "0.1.9"
+    "@firebase/storage" "0.9.2"
+    "@firebase/storage-compat" "0.1.10"
     "@firebase/util" "1.4.3"
 
 flat-arguments@^1.0.0:
@@ -2571,13 +2531,6 @@ fs-extra@^8.1.0:
     graceful-fs "^4.2.0"
     jsonfile "^4.0.0"
     universalify "^0.1.0"
-
-fs-minipass@^1.2.7:
-  version "1.2.7"
-  resolved "https://pkgs.dev.azure.com/lolilabsza/_packaging/lolilabsza/npm/registry/fs-minipass/-/fs-minipass-1.2.7.tgz#ccff8570841e7fe4265693da88936c55aed7f7c7"
-  integrity sha1-zP+FcIQef+QmVpPaiJNsVa7X98c=
-  dependencies:
-    minipass "^2.6.0"
 
 fs-minipass@^2.0.0:
   version "2.1.0"
@@ -2757,22 +2710,7 @@ global-dirs@^3.0.0:
   dependencies:
     ini "2.0.0"
 
-google-auth-library@^6.1.3:
-  version "6.1.6"
-  resolved "https://pkgs.dev.azure.com/lolilabsza/_packaging/lolilabsza/npm/registry/google-auth-library/-/google-auth-library-6.1.6.tgz#deacdcdb883d9ed6bac78bb5d79a078877fdf572"
-  integrity sha1-3qzc24g9nta6x4u115oHiHf99XI=
-  dependencies:
-    arrify "^2.0.0"
-    base64-js "^1.3.0"
-    ecdsa-sig-formatter "^1.0.11"
-    fast-text-encoding "^1.0.0"
-    gaxios "^4.0.0"
-    gcp-metadata "^4.2.0"
-    gtoken "^5.0.4"
-    jws "^4.0.0"
-    lru-cache "^6.0.0"
-
-google-auth-library@^7.0.0, google-auth-library@^7.6.1, google-auth-library@^7.9.2:
+google-auth-library@^7.0.0, google-auth-library@^7.11.0, google-auth-library@^7.6.1, google-auth-library@^7.9.2:
   version "7.11.0"
   resolved "https://pkgs.dev.azure.com/lolilabsza/_packaging/lolilabsza/npm/registry/google-auth-library/-/google-auth-library-7.11.0.tgz#b63699c65037310a424128a854ba7e736704cbdb"
   integrity sha1-tjaZxlA3MQpCQSioVLp+c2cEy9s=
@@ -2787,12 +2725,12 @@ google-auth-library@^7.0.0, google-auth-library@^7.6.1, google-auth-library@^7.9
     jws "^4.0.0"
     lru-cache "^6.0.0"
 
-google-gax@2.28.1:
-  version "2.28.1"
-  resolved "https://pkgs.dev.azure.com/lolilabsza/_packaging/lolilabsza/npm/registry/google-gax/-/google-gax-2.28.1.tgz#99bc234b5769d901d70959d40bd1651729eb4a34"
-  integrity sha1-mbwjS1dp2QHXCVnUC9FlFynrSjQ=
+google-gax@2.29.4:
+  version "2.29.4"
+  resolved "https://pkgs.dev.azure.com/lolilabsza/_packaging/lolilabsza/npm/registry/google-gax/-/google-gax-2.29.4.tgz#9126b9e6d58a88dd8217acef5109e5697ee1ec08"
+  integrity sha1-kSa55tWKiN2CF6zvUQnlaX7h7Ag=
   dependencies:
-    "@grpc/grpc-js" "~1.4.0"
+    "@grpc/grpc-js" "~1.5.0"
     "@grpc/proto-loader" "^0.6.1"
     "@types/long" "^4.0.0"
     abort-controller "^3.0.0"
@@ -2802,7 +2740,7 @@ google-gax@2.28.1:
     is-stream-ended "^0.1.4"
     node-fetch "^2.6.1"
     object-hash "^2.1.1"
-    proto3-json-serializer "^0.1.5"
+    proto3-json-serializer "^0.1.7"
     protobufjs "6.11.2"
     retry-request "^4.0.0"
 
@@ -3070,23 +3008,24 @@ ini@~1.3.0:
   resolved "https://pkgs.dev.azure.com/lolilabsza/_packaging/lolilabsza/npm/registry/ini/-/ini-1.3.8.tgz#a29da425b48806f34767a4efce397269af28432c"
   integrity sha1-op2kJbSIBvNHZ6Tvzjlyaa8oQyw=
 
-inquirer@~6.3.1:
-  version "6.3.1"
-  resolved "https://pkgs.dev.azure.com/lolilabsza/_packaging/lolilabsza/npm/registry/inquirer/-/inquirer-6.3.1.tgz#7a413b5e7950811013a3db491c61d1f3b776e8e7"
-  integrity sha1-ekE7XnlQgRATo9tJHGHR87d26Oc=
+inquirer@^8.2.0:
+  version "8.2.0"
+  resolved "https://pkgs.dev.azure.com/lolilabsza/_packaging/lolilabsza/npm/registry/inquirer/-/inquirer-8.2.0.tgz#f44f008dd344bbfc4b30031f45d984e034a3ac3a"
+  integrity sha1-9E8AjdNEu/xLMAMfRdmE4DSjrDo=
   dependencies:
-    ansi-escapes "^3.2.0"
-    chalk "^2.4.2"
-    cli-cursor "^2.1.0"
-    cli-width "^2.0.0"
+    ansi-escapes "^4.2.1"
+    chalk "^4.1.1"
+    cli-cursor "^3.1.0"
+    cli-width "^3.0.0"
     external-editor "^3.0.3"
-    figures "^2.0.0"
-    lodash "^4.17.11"
-    mute-stream "0.0.7"
-    run-async "^2.2.0"
-    rxjs "^6.4.0"
-    string-width "^2.1.0"
-    strip-ansi "^5.1.0"
+    figures "^3.0.0"
+    lodash "^4.17.21"
+    mute-stream "0.0.8"
+    ora "^5.4.1"
+    run-async "^2.4.0"
+    rxjs "^7.2.0"
+    string-width "^4.1.0"
+    strip-ansi "^6.0.0"
     through "^2.3.6"
 
 install-artifact-from-github@^1.3.0:
@@ -3140,11 +3079,6 @@ is-extglob@^2.1.1:
   resolved "https://pkgs.dev.azure.com/lolilabsza/_packaging/lolilabsza/npm/registry/is-extglob/-/is-extglob-2.1.1.tgz#a88c02535791f02ed37c76a1b9ea9773c833f8c2"
   integrity sha1-qIwCU1eR8C7TfHahueqXc8gz+MI=
 
-is-fullwidth-code-point@^2.0.0:
-  version "2.0.0"
-  resolved "https://pkgs.dev.azure.com/lolilabsza/_packaging/lolilabsza/npm/registry/is-fullwidth-code-point/-/is-fullwidth-code-point-2.0.0.tgz#a3b30a5c4f199183167aaab93beefae3ddfb654f"
-  integrity sha1-o7MKXE8ZkYMWeqq5O+764937ZU8=
-
 is-fullwidth-code-point@^3.0.0:
   version "3.0.0"
   resolved "https://pkgs.dev.azure.com/lolilabsza/_packaging/lolilabsza/npm/registry/is-fullwidth-code-point/-/is-fullwidth-code-point-3.0.0.tgz#f116f8064fe90b3f7844a38997c0b75051269f1d"
@@ -3172,6 +3106,11 @@ is-installed-globally@^0.4.0:
   dependencies:
     global-dirs "^3.0.0"
     is-path-inside "^3.0.2"
+
+is-interactive@^1.0.0:
+  version "1.0.0"
+  resolved "https://pkgs.dev.azure.com/lolilabsza/_packaging/lolilabsza/npm/registry/is-interactive/-/is-interactive-1.0.0.tgz#cea6e6ae5c870a7b0a0004070b7b587e0252912e"
+  integrity sha1-zqbmrlyHCnsKAAQHC3tYfgJSkS4=
 
 is-lambda@^1.0.1:
   version "1.0.1"
@@ -3222,6 +3161,11 @@ is-typedarray@^1.0.0, is-typedarray@~1.0.0:
   version "1.0.0"
   resolved "https://pkgs.dev.azure.com/lolilabsza/_packaging/lolilabsza/npm/registry/is-typedarray/-/is-typedarray-1.0.0.tgz#e479c80858df0c1b11ddda6940f96011fcda4a9a"
   integrity sha1-5HnICFjfDBsR3dppQPlgEfzaSpo=
+
+is-unicode-supported@^0.1.0:
+  version "0.1.0"
+  resolved "https://pkgs.dev.azure.com/lolilabsza/_packaging/lolilabsza/npm/registry/is-unicode-supported/-/is-unicode-supported-0.1.0.tgz#3f26c76a809593b52bfa2ecb5710ed2779b522a7"
+  integrity sha1-PybHaoCVk7Ur+i7LVxDtJ3m1Iqc=
 
 is-url@^1.2.2, is-url@^1.2.4:
   version "1.2.4"
@@ -3327,12 +3271,10 @@ json-parse-helpfulerror@^1.0.3:
   dependencies:
     jju "^1.1.0"
 
-json-ptr@^2.2.0:
-  version "2.2.0"
-  resolved "https://pkgs.dev.azure.com/lolilabsza/_packaging/lolilabsza/npm/registry/json-ptr/-/json-ptr-2.2.0.tgz#a4de4ed638cb23ae4cd4b51f8bf972a1c2293f1e"
-  integrity sha1-pN5O1jjLI65M1LUfi/lyocIpPx4=
-  dependencies:
-    tslib "^2.2.0"
+json-ptr@^3.0.1:
+  version "3.0.1"
+  resolved "https://pkgs.dev.azure.com/lolilabsza/_packaging/lolilabsza/npm/registry/json-ptr/-/json-ptr-3.0.1.tgz#b4f53bbc13ef0d7eacf675770a4bd8c16453463d"
+  integrity sha1-tPU7vBPvDX6s9nV3CkvYwWRTRj0=
 
 json-schema-traverse@^0.4.1:
   version "0.4.1"
@@ -3360,11 +3302,6 @@ jsonfile@^4.0.0:
   integrity sha1-h3Gq4HmbZAdrdmQPygWPnBDjPss=
   optionalDependencies:
     graceful-fs "^4.1.6"
-
-jsonparse@^1.2.0:
-  version "1.3.1"
-  resolved "https://pkgs.dev.azure.com/lolilabsza/_packaging/lolilabsza/npm/registry/jsonparse/-/jsonparse-1.3.1.tgz#3f4dae4a91fac315f71062f8521cc239f1366280"
-  integrity sha1-P02uSpH6wxX3EGL4UhzCOfE2YoA=
 
 jsonwebtoken@^8.5.1:
   version "8.5.1"
@@ -3638,12 +3575,13 @@ lodash@^4.17.10, lodash@^4.17.11, lodash@^4.17.14, lodash@^4.17.19, lodash@^4.17
   resolved "https://registry.yarnpkg.com/lodash/-/lodash-4.17.21.tgz#679591c564c3bffaae8454cf0b3df370c3d6911c"
   integrity sha512-v2kDEe57lecTulaDIuNTPy3Ry4gLGJ6Z1O3vE1krgXZNrsQ+LFTGHVxVjcXPs17LhbZVGedAJv8XZ1tvj5FvSg==
 
-log-symbols@^2.2.0:
-  version "2.2.0"
-  resolved "https://pkgs.dev.azure.com/lolilabsza/_packaging/lolilabsza/npm/registry/log-symbols/-/log-symbols-2.2.0.tgz#5740e1c5d6f0dfda4ad9323b5332107ef6b4c40a"
-  integrity sha1-V0Dhxdbw39pK2TI7UzIQfva0xAo=
+log-symbols@^4.1.0:
+  version "4.1.0"
+  resolved "https://pkgs.dev.azure.com/lolilabsza/_packaging/lolilabsza/npm/registry/log-symbols/-/log-symbols-4.1.0.tgz#3fbdbb95b4683ac9fc785111e792e558d4abd503"
+  integrity sha1-P727lbRoOsn8eFER55LlWNSr1QM=
   dependencies:
-    chalk "^2.0.1"
+    chalk "^4.1.0"
+    is-unicode-supported "^0.1.0"
 
 logform@^2.3.2:
   version "2.3.2"
@@ -3754,10 +3692,10 @@ marked-terminal@^3.3.0:
     node-emoji "^1.4.1"
     supports-hyperlinks "^1.0.1"
 
-marked@^0.7.0:
-  version "0.7.0"
-  resolved "https://pkgs.dev.azure.com/lolilabsza/_packaging/lolilabsza/npm/registry/marked/-/marked-0.7.0.tgz#b64201f051d271b1edc10a04d1ae9b74bb8e5c0e"
-  integrity sha1-tkIB8FHScbHtwQoE0a6bdLuOXA4=
+marked@^4.0.10:
+  version "4.0.12"
+  resolved "https://pkgs.dev.azure.com/lolilabsza/_packaging/lolilabsza/npm/registry/marked/-/marked-4.0.12.tgz#2262a4e6fd1afd2f13557726238b69a48b982f7d"
+  integrity sha1-ImKk5v0a/S8TVXcmI4tppIuYL30=
 
 media-typer@0.3.0:
   version "0.3.0"
@@ -3815,10 +3753,10 @@ mime@^3.0.0:
   resolved "https://pkgs.dev.azure.com/lolilabsza/_packaging/lolilabsza/npm/registry/mime/-/mime-3.0.0.tgz#b374550dca3a0c18443b0c950a6a58f1931cf7a7"
   integrity sha1-s3RVDco6DBhEOwyVCmpY8ZMc96c=
 
-mimic-fn@^1.0.0:
-  version "1.2.0"
-  resolved "https://pkgs.dev.azure.com/lolilabsza/_packaging/lolilabsza/npm/registry/mimic-fn/-/mimic-fn-1.2.0.tgz#820c86a39334640e99516928bd03fca88057d022"
-  integrity sha1-ggyGo5M0ZA6ZUWkovQP8qIBX0CI=
+mimic-fn@^2.1.0:
+  version "2.1.0"
+  resolved "https://pkgs.dev.azure.com/lolilabsza/_packaging/lolilabsza/npm/registry/mimic-fn/-/mimic-fn-2.1.0.tgz#7ed2c2ccccaf84d3ffcb7a69b57711fc2083401b"
+  integrity sha1-ftLCzMyvhNP/y3pptXcR/CCDQBs=
 
 mimic-response@^1.0.0, mimic-response@^1.0.1:
   version "1.0.1"
@@ -3881,27 +3819,12 @@ minipass-sized@^1.0.3:
   dependencies:
     minipass "^3.0.0"
 
-minipass@^2.6.0, minipass@^2.9.0:
-  version "2.9.0"
-  resolved "https://pkgs.dev.azure.com/lolilabsza/_packaging/lolilabsza/npm/registry/minipass/-/minipass-2.9.0.tgz#e713762e7d3e32fed803115cf93e04bca9fcc9a6"
-  integrity sha1-5xN2Ln0+Mv7YAxFc+T4EvKn8yaY=
-  dependencies:
-    safe-buffer "^5.1.2"
-    yallist "^3.0.0"
-
 minipass@^3.0.0, minipass@^3.1.0, minipass@^3.1.1, minipass@^3.1.3:
   version "3.1.6"
   resolved "https://pkgs.dev.azure.com/lolilabsza/_packaging/lolilabsza/npm/registry/minipass/-/minipass-3.1.6.tgz#3b8150aa688a711a1521af5e8779c1d3bb4f45ee"
   integrity sha1-O4FQqmiKcRoVIa9eh3nB07tPRe4=
   dependencies:
     yallist "^4.0.0"
-
-minizlib@^1.3.3:
-  version "1.3.3"
-  resolved "https://pkgs.dev.azure.com/lolilabsza/_packaging/lolilabsza/npm/registry/minizlib/-/minizlib-1.3.3.tgz#2290de96818a34c29551c8a8d301216bd65a861d"
-  integrity sha1-IpDeloGKNMKVUcio0wEha9Zahh0=
-  dependencies:
-    minipass "^2.9.0"
 
 minizlib@^2.0.0, minizlib@^2.1.1:
   version "2.1.2"
@@ -3949,10 +3872,10 @@ ms@2.1.3, ms@^2.0.0, ms@^2.1.1:
   resolved "https://pkgs.dev.azure.com/lolilabsza/_packaging/lolilabsza/npm/registry/ms/-/ms-2.1.3.tgz#574c8138ce1d2b5861f0b44579dbadd60c6615b2"
   integrity sha1-V0yBOM4dK1hh8LRFedut1gxmFbI=
 
-mute-stream@0.0.7:
-  version "0.0.7"
-  resolved "https://pkgs.dev.azure.com/lolilabsza/_packaging/lolilabsza/npm/registry/mute-stream/-/mute-stream-0.0.7.tgz#3075ce93bc21b8fab43e1bc4da7e8115ed1e7bab"
-  integrity sha1-MHXOk7whuPq0PhvE2n6BFe0ee6s=
+mute-stream@0.0.8:
+  version "0.0.8"
+  resolved "https://pkgs.dev.azure.com/lolilabsza/_packaging/lolilabsza/npm/registry/mute-stream/-/mute-stream-0.0.8.tgz#1630c42b2251ff81e2a283de96a5497ea92e5e0d"
+  integrity sha1-FjDEKyJR/4HiooPelqVJfqkuXg0=
 
 nan@^2.15.0:
   version "2.15.0"
@@ -4006,24 +3929,12 @@ node-emoji@^1.4.1:
   dependencies:
     lodash "^4.17.21"
 
-node-fetch@2.6.5:
-  version "2.6.5"
-  resolved "https://pkgs.dev.azure.com/lolilabsza/_packaging/lolilabsza/npm/registry/node-fetch/-/node-fetch-2.6.5.tgz#42735537d7f080a7e5f78b6c549b7146be1742fd"
-  integrity sha1-QnNVN9fwgKfl94tsVJtxRr4XQv0=
-  dependencies:
-    whatwg-url "^5.0.0"
-
-node-fetch@^2.6.1:
+node-fetch@2.6.7, node-fetch@^2.6.1:
   version "2.6.7"
   resolved "https://pkgs.dev.azure.com/lolilabsza/_packaging/lolilabsza/npm/registry/node-fetch/-/node-fetch-2.6.7.tgz#24de9fba827e3b4ae44dc8b20256a379160052ad"
   integrity sha1-JN6fuoJ+O0rkTciyAlajeRYAUq0=
   dependencies:
     whatwg-url "^5.0.0"
-
-node-forge@^0.10.0:
-  version "0.10.0"
-  resolved "https://pkgs.dev.azure.com/lolilabsza/_packaging/lolilabsza/npm/registry/node-forge/-/node-forge-0.10.0.tgz#32dea2afb3e9926f02ee5ce8794902691a676bf3"
-  integrity sha1-Mt6ir7Ppkm8C7lzoeUkCaRpna/M=
 
 node-forge@^1.0.0:
   version "1.2.1"
@@ -4119,12 +4030,12 @@ one-time@^1.0.0:
   dependencies:
     fn.name "1.x.x"
 
-onetime@^2.0.0:
-  version "2.0.1"
-  resolved "https://pkgs.dev.azure.com/lolilabsza/_packaging/lolilabsza/npm/registry/onetime/-/onetime-2.0.1.tgz#067428230fd67443b2794b22bba528b6867962d4"
-  integrity sha1-BnQoIw/WdEOyeUsiu6UotoZ5YtQ=
+onetime@^5.1.0:
+  version "5.1.2"
+  resolved "https://pkgs.dev.azure.com/lolilabsza/_packaging/lolilabsza/npm/registry/onetime/-/onetime-5.1.2.tgz#d0e96ebb56b07476df1dd9c4806e5237985ca45e"
+  integrity sha1-0Oluu1awdHbfHdnEgG5SN5hcpF4=
   dependencies:
-    mimic-fn "^1.0.0"
+    mimic-fn "^2.1.0"
 
 open-simplex-noise@^2.5.0:
   version "2.5.0"
@@ -4157,16 +4068,19 @@ optionator@^0.8.1:
     type-check "~0.3.2"
     word-wrap "~1.2.3"
 
-ora@^3.4.0:
-  version "3.4.0"
-  resolved "https://pkgs.dev.azure.com/lolilabsza/_packaging/lolilabsza/npm/registry/ora/-/ora-3.4.0.tgz#bf0752491059a3ef3ed4c85097531de9fdbcd318"
-  integrity sha1-vwdSSRBZo+8+1MhQl1Md6f280xg=
+ora@^5.4.1:
+  version "5.4.1"
+  resolved "https://pkgs.dev.azure.com/lolilabsza/_packaging/lolilabsza/npm/registry/ora/-/ora-5.4.1.tgz#1b2678426af4ac4a509008e5e4ac9e9959db9e18"
+  integrity sha1-GyZ4Qmr0rEpQkAjl5KyemVnbnhg=
   dependencies:
-    chalk "^2.4.2"
-    cli-cursor "^2.1.0"
-    cli-spinners "^2.0.0"
-    log-symbols "^2.2.0"
-    strip-ansi "^5.2.0"
+    bl "^4.1.0"
+    chalk "^4.1.0"
+    cli-cursor "^3.1.0"
+    cli-spinners "^2.5.0"
+    is-interactive "^1.0.0"
+    is-unicode-supported "^0.1.0"
+    log-symbols "^4.1.0"
+    strip-ansi "^6.0.0"
     wcwidth "^1.0.1"
 
 os-tmpdir@~1.0.2:
@@ -4334,11 +4248,6 @@ printj@~1.1.0:
   resolved "https://pkgs.dev.azure.com/lolilabsza/_packaging/lolilabsza/npm/registry/printj/-/printj-1.1.2.tgz#d90deb2975a8b9f600fb3a1c94e3f4c53c78a222"
   integrity sha1-2Q3rKXWoufYA+zoclOP0xTx4oiI=
 
-process-nextick-args@~1.0.6:
-  version "1.0.7"
-  resolved "https://pkgs.dev.azure.com/lolilabsza/_packaging/lolilabsza/npm/registry/process-nextick-args/-/process-nextick-args-1.0.7.tgz#150e20b756590ad3f91093f25a4f2ad8bff30ba3"
-  integrity sha1-FQ4gt1ZZCtP5EJPyWk8q2L/zC6M=
-
 process-nextick-args@~2.0.0:
   version "2.0.1"
   resolved "https://pkgs.dev.azure.com/lolilabsza/_packaging/lolilabsza/npm/registry/process-nextick-args/-/process-nextick-args-2.0.1.tgz#7820d9b16120cc55ca9ae7792680ae7dba6d7fe2"
@@ -4376,6 +4285,13 @@ proto3-json-serializer@^0.1.5:
   version "0.1.7"
   resolved "https://pkgs.dev.azure.com/lolilabsza/_packaging/lolilabsza/npm/registry/proto3-json-serializer/-/proto3-json-serializer-0.1.7.tgz#d140eff39240e891391c3eaaa71abdc4b7102828"
   integrity sha1-0UDv85JA6JE5HD6qpxq9xLcQKCg=
+  dependencies:
+    protobufjs "^6.11.2"
+
+proto3-json-serializer@^0.1.7:
+  version "0.1.8"
+  resolved "https://pkgs.dev.azure.com/lolilabsza/_packaging/lolilabsza/npm/registry/proto3-json-serializer/-/proto3-json-serializer-0.1.8.tgz#f80f9afc1efe5ed9a9856bbbd17dc7cabd7ce9a3"
+  integrity sha1-+A+a/B7+XtmphWu70X3Hyr186aM=
   dependencies:
     protobufjs "^6.11.2"
 
@@ -4552,18 +4468,6 @@ readable-stream@^3.1.1, readable-stream@^3.4.0, readable-stream@^3.6.0:
     string_decoder "^1.1.1"
     util-deprecate "^1.0.1"
 
-readable-stream@~2.0.0:
-  version "2.0.6"
-  resolved "https://pkgs.dev.azure.com/lolilabsza/_packaging/lolilabsza/npm/registry/readable-stream/-/readable-stream-2.0.6.tgz#8f90341e68a53ccc928788dacfcd11b36eb9b78e"
-  integrity sha1-j5A0HmilPMySh4jaz80Rs265t44=
-  dependencies:
-    core-util-is "~1.0.0"
-    inherits "~2.0.1"
-    isarray "~1.0.0"
-    process-nextick-args "~1.0.6"
-    string_decoder "~0.10.x"
-    util-deprecate "~1.0.1"
-
 readdir-glob@^1.0.0:
   version "1.1.1"
   resolved "https://pkgs.dev.azure.com/lolilabsza/_packaging/lolilabsza/npm/registry/readdir-glob/-/readdir-glob-1.1.1.tgz#f0e10bb7bf7bfa7e0add8baffdc54c3f7dbee6c4"
@@ -4630,6 +4534,11 @@ require-directory@^2.1.1:
   resolved "https://pkgs.dev.azure.com/lolilabsza/_packaging/lolilabsza/npm/registry/require-directory/-/require-directory-2.1.1.tgz#8c64ad5fd30dab1c976e2344ffe7f792a6a6df42"
   integrity sha1-jGStX9MNqxyXbiNE/+f3kqam30I=
 
+require-from-string@^2.0.2:
+  version "2.0.2"
+  resolved "https://pkgs.dev.azure.com/lolilabsza/_packaging/lolilabsza/npm/registry/require-from-string/-/require-from-string-2.0.2.tgz#89a7fdd938261267318eafe14f9c32e598c36909"
+  integrity sha1-iaf92TgmEmcxjq/hT5wy5ZjDaQk=
+
 resolve@^1.20.0:
   version "1.21.0"
   resolved "https://registry.yarnpkg.com/resolve/-/resolve-1.21.0.tgz#b51adc97f3472e6a5cf4444d34bc9d6b9037591f"
@@ -4646,12 +4555,12 @@ responselike@^1.0.2:
   dependencies:
     lowercase-keys "^1.0.0"
 
-restore-cursor@^2.0.0:
-  version "2.0.0"
-  resolved "https://pkgs.dev.azure.com/lolilabsza/_packaging/lolilabsza/npm/registry/restore-cursor/-/restore-cursor-2.0.0.tgz#9f7ee287f82fd326d4fd162923d62129eee0dfaf"
-  integrity sha1-n37ih/gv0ybU/RYpI9YhKe7g368=
+restore-cursor@^3.1.0:
+  version "3.1.0"
+  resolved "https://pkgs.dev.azure.com/lolilabsza/_packaging/lolilabsza/npm/registry/restore-cursor/-/restore-cursor-3.1.0.tgz#39f67c54b3a7a58cea5236d95cf0034239631f7e"
+  integrity sha1-OfZ8VLOnpYzqUjbZXPADQjljH34=
   dependencies:
-    onetime "^2.0.0"
+    onetime "^5.1.0"
     signal-exit "^3.0.2"
 
 retry-request@^4.0.0, retry-request@^4.2.2:
@@ -4711,24 +4620,24 @@ rsvp@^4.8.5:
   resolved "https://pkgs.dev.azure.com/lolilabsza/_packaging/lolilabsza/npm/registry/rsvp/-/rsvp-4.8.5.tgz#c8f155311d167f68f21e168df71ec5b083113734"
   integrity sha1-yPFVMR0Wf2jyHhaN9x7FsIMRNzQ=
 
-run-async@^2.2.0:
+run-async@^2.4.0:
   version "2.4.1"
   resolved "https://pkgs.dev.azure.com/lolilabsza/_packaging/lolilabsza/npm/registry/run-async/-/run-async-2.4.1.tgz#8440eccf99ea3e70bd409d49aab88e10c189a455"
   integrity sha1-hEDsz5nqPnC9QJ1JqriOEMGJpFU=
 
-rxjs@^6.4.0:
-  version "6.6.7"
-  resolved "https://pkgs.dev.azure.com/lolilabsza/_packaging/lolilabsza/npm/registry/rxjs/-/rxjs-6.6.7.tgz#90ac018acabf491bf65044235d5863c4dab804c9"
-  integrity sha1-kKwBisq/SRv2UEQjXVhjxNq4BMk=
+rxjs@^7.2.0:
+  version "7.5.2"
+  resolved "https://pkgs.dev.azure.com/lolilabsza/_packaging/lolilabsza/npm/registry/rxjs/-/rxjs-7.5.2.tgz#11e4a3a1dfad85dbf7fb6e33cbba17668497490b"
+  integrity sha1-EeSjod+thdv3+24zy7oXZoSXSQs=
   dependencies:
-    tslib "^1.9.0"
+    tslib "^2.1.0"
 
 safe-buffer@5.1.2, safe-buffer@~5.1.0, safe-buffer@~5.1.1:
   version "5.1.2"
   resolved "https://pkgs.dev.azure.com/lolilabsza/_packaging/lolilabsza/npm/registry/safe-buffer/-/safe-buffer-5.1.2.tgz#991ec69d296e0313747d59bdfd2b745c35f8828d"
   integrity sha1-mR7GnSluAxN0fVm9/St0XDX4go0=
 
-safe-buffer@5.2.1, safe-buffer@>=5.1.0, safe-buffer@^5.0.1, safe-buffer@^5.1.2, safe-buffer@^5.2.1, safe-buffer@~5.2.0:
+safe-buffer@5.2.1, safe-buffer@>=5.1.0, safe-buffer@^5.0.1, safe-buffer@^5.1.2, safe-buffer@~5.2.0:
   version "5.2.1"
   resolved "https://pkgs.dev.azure.com/lolilabsza/_packaging/lolilabsza/npm/registry/safe-buffer/-/safe-buffer-5.2.1.tgz#1eaf9fa9bdb1fdd4ec75f58f9cdb4e6b7827eec6"
   integrity sha1-Hq+fqb2x/dTsdfWPnNtOa3gn7sY=
@@ -4980,6 +4889,11 @@ stack-trace@0.0.x:
   resolved "https://pkgs.dev.azure.com/lolilabsza/_packaging/lolilabsza/npm/registry/statuses/-/statuses-1.5.0.tgz#161c7dac177659fd9811f43771fa99381478628c"
   integrity sha1-Fhx9rBd2Wf2YEfQ3cfqZOBR4Yow=
 
+stream-chain@^2.2.4:
+  version "2.2.4"
+  resolved "https://pkgs.dev.azure.com/lolilabsza/_packaging/lolilabsza/npm/registry/stream-chain/-/stream-chain-2.2.4.tgz#2e5e9858e00d25ebaf7e4339e8328ddcab5facad"
+  integrity sha1-Ll6YWOANJeuvfkM56DKN3KtfrK0=
+
 stream-combiner@^0.2.2:
   version "0.2.2"
   resolved "https://registry.yarnpkg.com/stream-combiner/-/stream-combiner-0.2.2.tgz#aec8cbac177b56b6f4fa479ced8c1912cee52858"
@@ -4994,6 +4908,13 @@ stream-events@^1.0.4, stream-events@^1.0.5:
   integrity sha1-u8iY7E3zOkkC2JIzPUfam/HEBtU=
   dependencies:
     stubs "^3.0.0"
+
+stream-json@^1.7.3:
+  version "1.7.3"
+  resolved "https://pkgs.dev.azure.com/lolilabsza/_packaging/lolilabsza/npm/registry/stream-json/-/stream-json-1.7.3.tgz#8a2abe8b51a2e84ffbc8d09bca9d01dc70facae3"
+  integrity sha1-iiq+i1Gi6E/7yNCbyp0B3HD6yuM=
+  dependencies:
+    stream-chain "^2.2.4"
 
 stream-shift@^1.0.0:
   version "1.0.1"
@@ -5021,14 +4942,6 @@ string-length@^1.0.0:
     is-fullwidth-code-point "^3.0.0"
     strip-ansi "^6.0.1"
 
-string-width@^2.1.0:
-  version "2.1.1"
-  resolved "https://pkgs.dev.azure.com/lolilabsza/_packaging/lolilabsza/npm/registry/string-width/-/string-width-2.1.1.tgz#ab93f27a8dc13d28cac815c462143a6d9012ae9e"
-  integrity sha1-q5Pyeo3BPSjKyBXEYhQ6bZASrp4=
-  dependencies:
-    is-fullwidth-code-point "^2.0.0"
-    strip-ansi "^4.0.0"
-
 string_decoder@^1.1.1:
   version "1.3.0"
   resolved "https://pkgs.dev.azure.com/lolilabsza/_packaging/lolilabsza/npm/registry/string_decoder/-/string_decoder-1.3.0.tgz#42f114594a46cf1a8e30b0a84f56c78c3edac21e"
@@ -5054,20 +4967,6 @@ strip-ansi@^3.0.0:
   integrity sha1-ajhfuIU9lS1f8F0Oiq+UJ43GPc8=
   dependencies:
     ansi-regex "^2.0.0"
-
-strip-ansi@^4.0.0:
-  version "4.0.0"
-  resolved "https://pkgs.dev.azure.com/lolilabsza/_packaging/lolilabsza/npm/registry/strip-ansi/-/strip-ansi-4.0.0.tgz#a8479022eb1ac368a871389b635262c505ee368f"
-  integrity sha1-qEeQIusaw2iocTibY1JixQXuNo8=
-  dependencies:
-    ansi-regex "^3.0.0"
-
-strip-ansi@^5.1.0, strip-ansi@^5.2.0:
-  version "5.2.0"
-  resolved "https://pkgs.dev.azure.com/lolilabsza/_packaging/lolilabsza/npm/registry/strip-ansi/-/strip-ansi-5.2.0.tgz#8c9a536feb6afc962bdfa5b104a5091c1ad9c0ae"
-  integrity sha1-jJpTb+tq/JYr36WxBKUJHBrZwK4=
-  dependencies:
-    ansi-regex "^4.1.0"
 
 strip-ansi@^6.0.0, strip-ansi@^6.0.1:
   version "6.0.1"
@@ -5161,20 +5060,7 @@ tar-stream@^2.2.0:
     inherits "^2.0.3"
     readable-stream "^3.1.1"
 
-tar@^4.3.0:
-  version "4.4.19"
-  resolved "https://pkgs.dev.azure.com/lolilabsza/_packaging/lolilabsza/npm/registry/tar/-/tar-4.4.19.tgz#2e4d7263df26f2b914dee10c825ab132123742f3"
-  integrity sha1-Lk1yY98m8rkU3uEMglqxMhI3QvM=
-  dependencies:
-    chownr "^1.1.4"
-    fs-minipass "^1.2.7"
-    minipass "^2.9.0"
-    minizlib "^1.3.3"
-    mkdirp "^0.5.5"
-    safe-buffer "^5.2.1"
-    yallist "^3.1.1"
-
-tar@^6.0.2, tar@^6.1.2:
+tar@^6.0.2, tar@^6.1.11, tar@^6.1.2:
   version "6.1.11"
   resolved "https://pkgs.dev.azure.com/lolilabsza/_packaging/lolilabsza/npm/registry/tar/-/tar-6.1.11.tgz#6760a38f003afa1b2ffd0ffe9e9abbd0eab3d621"
   integrity sha1-Z2CjjwA6+hsv/Q/+npq70Oqz1iE=
@@ -5215,15 +5101,7 @@ text-hex@1.0.x:
   resolved "https://pkgs.dev.azure.com/lolilabsza/_packaging/lolilabsza/npm/registry/text-hex/-/text-hex-1.0.0.tgz#69dc9c1b17446ee79a92bf5b884bb4b9127506f5"
   integrity sha1-adycGxdEbueakr9biEu0uRJ1BvU=
 
-through2@2.0.1:
-  version "2.0.1"
-  resolved "https://pkgs.dev.azure.com/lolilabsza/_packaging/lolilabsza/npm/registry/through2/-/through2-2.0.1.tgz#384e75314d49f32de12eebb8136b8eb6b5d59da9"
-  integrity sha1-OE51MU1J8y3hLuu4E2uOtrXVnak=
-  dependencies:
-    readable-stream "~2.0.0"
-    xtend "~4.0.0"
-
-through@2, "through@>=2.2.7 <3", through@^2.3.6, through@^2.3.8, through@~2.3, through@~2.3.4:
+through@2, through@^2.3.6, through@^2.3.8, through@~2.3, through@~2.3.4:
   version "2.3.8"
   resolved "https://registry.yarnpkg.com/through/-/through-2.3.8.tgz#0dd4c9ffaabc357960b1b724115d7e0e86a2e1f5"
   integrity sha1-DdTJ/6q8NXlgsbckEV1+Doai4fU=
@@ -5297,15 +5175,10 @@ triple-beam@^1.2.0, triple-beam@^1.3.0:
   resolved "https://pkgs.dev.azure.com/lolilabsza/_packaging/lolilabsza/npm/registry/triple-beam/-/triple-beam-1.3.0.tgz#a595214c7298db8339eeeee083e4d10bd8cb8dd9"
   integrity sha1-pZUhTHKY24M57u7gg+TRC9jLjdk=
 
-tslib@>=1.10.0, tslib@^2.0.1, tslib@^2.1.0, tslib@^2.2.0:
+tslib@>=1.10.0, tslib@^2.0.1, tslib@^2.1.0:
   version "2.3.1"
   resolved "https://registry.yarnpkg.com/tslib/-/tslib-2.3.1.tgz#e8a335add5ceae51aa261d32a490158ef042ef01"
   integrity sha512-77EbyPPpMz+FRFRuAFlWMtmgUWGe9UOG2Z25NqCwiIjRhOf5iKGuzSe5P2w1laq+FkRy4p+PCuVkJSGkzTEKVw==
-
-tslib@^1.9.0:
-  version "1.14.1"
-  resolved "https://pkgs.dev.azure.com/lolilabsza/_packaging/lolilabsza/npm/registry/tslib/-/tslib-1.14.1.tgz#cf2d38bdc34a134bcaf1091c41f6619e2f672d00"
-  integrity sha1-zy04vcNKE0vK8QkcQfZhni9nLQA=
 
 tunnel-agent@^0.6.0:
   version "0.6.0"
@@ -5343,6 +5216,11 @@ type-fest@^0.20.2:
   version "0.20.2"
   resolved "https://pkgs.dev.azure.com/lolilabsza/_packaging/lolilabsza/npm/registry/type-fest/-/type-fest-0.20.2.tgz#1bf207f4b28f91583666cb5fbd327887301cd5f4"
   integrity sha1-G/IH9LKPkVg2ZstfvTJ4hzAc1fQ=
+
+type-fest@^0.21.3:
+  version "0.21.3"
+  resolved "https://pkgs.dev.azure.com/lolilabsza/_packaging/lolilabsza/npm/registry/type-fest/-/type-fest-0.21.3.tgz#d260a24b0198436e133fa26a524a6d65fa3b2e37"
+  integrity sha1-0mCiSwGYQ24TP6JqUkptZfo7Ljc=
 
 type-fest@^0.8.1:
   version "0.8.1"
@@ -5699,11 +5577,6 @@ xregexp@2.0.0:
   resolved "https://pkgs.dev.azure.com/lolilabsza/_packaging/lolilabsza/npm/registry/xregexp/-/xregexp-2.0.0.tgz#52a63e56ca0b84a7f3a5f3d61872f126ad7a5943"
   integrity sha1-UqY+VsoLhKfzpfPWGHLxJq16WUM=
 
-xtend@~4.0.0:
-  version "4.0.2"
-  resolved "https://pkgs.dev.azure.com/lolilabsza/_packaging/lolilabsza/npm/registry/xtend/-/xtend-4.0.2.tgz#bb72779f5fa465186b1f438f674fa347fdb5db54"
-  integrity sha1-u3J3n1+kZRhrH0OPZ0+jR/2121Q=
-
 y18n@^5.0.5:
   version "5.0.8"
   resolved "https://pkgs.dev.azure.com/lolilabsza/_packaging/lolilabsza/npm/registry/y18n/-/y18n-5.0.8.tgz#7f4934d0f7ca8c56f95314939ddcd2dd91ce1d55"
@@ -5714,7 +5587,7 @@ yallist@^2.0.0:
   resolved "https://pkgs.dev.azure.com/lolilabsza/_packaging/lolilabsza/npm/registry/yallist/-/yallist-2.1.2.tgz#1c11f9218f076089a47dd512f93c6699a6a81d52"
   integrity sha1-HBH5IY8HYImkfdUS+TxmmaaoHVI=
 
-yallist@^3.0.0, yallist@^3.0.2, yallist@^3.1.1:
+yallist@^3.0.2:
   version "3.1.1"
   resolved "https://pkgs.dev.azure.com/lolilabsza/_packaging/lolilabsza/npm/registry/yallist/-/yallist-3.1.1.tgz#dbb7daf9bfd8bac9ab45ebf602b8cbad0d5d08fd"
   integrity sha1-27fa+b/YusmrRev2ArjLrQ1dCP0=

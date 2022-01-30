@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Manager</title>
+    <style>
+      body {
+        display: flex;
+        margin: 0;
+        font-family: Helvetica;
+      }
+      #planet-list,
+      #planet-view {
+        height: 100vh;
+      }
+      #planet-list {
+        flex-basis: 20%;
+        width: 20%;
+        overflow-x: scroll;
+        padding: 10px;
+      }
+      #planet-view {
+        width: 80%;
+        flex-basis: 80%;
+      }
+
+      #planet-list .planet {
+        padding: 5px;
+        background: #fff;
+      }
+
+      .planet:hover {
+        cursor: pointer;
+        filter: invert(1);
+        border-radius: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="planet-list">
+      <h1>Planets</h1>
+    </div>
+    <canvas id="planet-view"></canvas>
+  </body>
+  <script type="module" src="/src/manager.ts"></script>
+</html>

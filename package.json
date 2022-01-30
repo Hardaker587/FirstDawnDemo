@@ -17,7 +17,7 @@
   "dependencies": {
     "@babylonjs/core": "^4.2.0",
     "@babylonjs/inspector": "^4.2.0",
-    "boring-firebase": "^1.2.18",
+    "boring-firebase": "^1.2.25",
     "detect-gpu": "^4.0.4",
     "open-simplex-noise": "^2.5.0",
     "uuid": "^8.3.2",

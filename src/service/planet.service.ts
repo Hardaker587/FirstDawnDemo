@@ -3,7 +3,6 @@ import { PlanetMaterialManager } from "./textures.service";
 import { PlanetOptions } from "../types/types";
 
 import * as uuid from "uuid";
-import { anaglyphPixelShader } from "@babylonjs/core/Shaders/anaglyph.fragment";
 
 type PlanetMeshOptions = {
   subdivisions?: number;
@@ -33,7 +32,7 @@ export class PlanetMesh extends BABYLON.TransformNode {
     scene.addTransformNode(this);
 
     const statusContainer = document.getElementById("currentStatus");
-    statusContainer.innerText = "Loading mesh...";
+    if (statusContainer) statusContainer.innerText = "Loading mesh...";
   }
 
   set material(value: BABYLON.Material) {
@@ -238,11 +237,13 @@ class Planet extends BABYLON.TransformNode {
     const statsContainer = document.getElementById("stats");
     const statsOptions = Object.keys(this.options);
 
-    statsOptions.forEach((option: any) => {
-      const node = document.createElement("p");
-      node.innerText = `${option}: ${this.options[option]}`;
-      statsContainer?.appendChild(node);
-    });
+    if (statsContainer) {
+      statsOptions.forEach((option: any) => {
+        const node = document.createElement("p");
+        node.innerText = `${option}: ${this.options[option]}`;
+        statsContainer?.appendChild(node);
+      });
+    }
 
     this.mesh = new PlanetMesh(name, this.options.meshOptions as any, scene);
     this.mesh.setParent(this);
