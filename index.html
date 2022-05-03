@@ -1,22 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="favicon.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite App</title>
-    <style>
-      body {
-        font-family: Verdana, Geneva, Tahoma, sans-serif;
-      }
-    </style>
-  </head>
 
-  <body>
-    <div id="app"></div>
-    <div
-      id="stats"
-      style="
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Vite App</title>
+  <style>
+    body {
+      font-family: Verdana, Geneva, Tahoma, sans-serif;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="app"></div>
+  <div id="stats" style="
         position: absolute;
         left: 15px;
         top: 15px;
@@ -24,23 +23,31 @@
         padding: 8px;
         color: black;
         border-radius: 15px;
-      "
-    ></div>
-    <canvas id="game"></canvas>
-    <img
-      src="/src/images/Logo.svg"
-      style="
+      "></div>
+  <canvas id="game"></canvas>
+  <img src="/src/images/Logo.svg" style="
         position: absolute;
         bottom: 15px;
         left: 15px;
         width: 150px;
         height: auto;
-      "
-      alt="First Dawn"
-    />
-    <button
-      id="screenshot"
-      style="
+      " alt="First Dawn" />
+  <button id="view" style="
+        position: absolute;
+        top: 15px;
+        right: 185px;
+        padding: 8px;
+        background: #3caeef;
+        border: 0px;
+        color: #fff;
+        min-width: 72px;
+      ">
+    <a href="/manager.html">
+      View Saved
+    </a>
+
+  </button>
+  <button id="screenshot" style="
         position: absolute;
         top: 15px;
         right: 15px;
@@ -49,13 +56,10 @@
         border: 0px;
         color: #fff;
         min-width: 72px;
-      "
-    >
-      Save
-    </button>
-    <button
-      id="generator"
-      style="
+      ">
+    Save
+  </button>
+  <button id="generator" style="
         position: absolute;
         top: 15px;
         right: 100px;
@@ -64,16 +68,13 @@
         border: 0px;
         color: #fff;
         min-width: 72px;
-      "
-    >
-      Generate
-    </button>
-    <div
-      id="currentStatus"
-      style="position: absolute; bottom: 15px; right: 15px; color: #fff"
-    >
-      Starting up...
-    </div>
-    <script type="module" src="/src/main.ts"></script>
-  </body>
+      ">
+    Generate
+  </button>
+  <div id="currentStatus" style="position: absolute; bottom: 15px; right: 15px; color: #fff">
+    Starting up...
+  </div>
+  <script type="module" src="/src/main.ts"></script>
+</body>
+
 </html>

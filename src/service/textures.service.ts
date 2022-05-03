@@ -6,6 +6,7 @@ import { ColorGradientFactory } from "../utilities/color-gradient.utility";
 import { convolute } from "../utilities/convolution.utility";
 
 import { firebaseDB } from "../service/firebase.service";
+import { ExportService } from "../service/export.service";
 
 type BuiltTextures = {
   heightDataResult: ImageData;
@@ -20,11 +21,11 @@ const hashStringToInt = (s: string) => {
   }, 0);
 };
 
-import { getGPUTier } from "detect-gpu";
+// import { getGPUTier } from "detect-gpu";
 let gpuTier = 1;
-(async () => {
-  await getGPUTier().then((res) => (gpuTier = res.tier));
-})();
+// (async () => {
+//   await getGPUTier().then((res) => (gpuTier = res.tier));
+// })();
 
 /**
  * Wraps web-worker to build procedural textures
@@ -72,6 +73,7 @@ class PlanetMaterialManager {
   scene: BABYLON.Scene;
   engine: BABYLON.Engine;
   camera: BABYLON.Camera;
+  bulk?: boolean;
   _noiseSettings: NoiseSettings;
   _raw: BABYLON.StandardMaterial;
   _rawAtmosphere: BABYLON.StandardMaterial;
@@ -85,13 +87,15 @@ class PlanetMaterialManager {
     options: PlanetOptions,
     scene: BABYLON.Scene,
     engine: BABYLON.Engine,
-    camera: BABYLON.Camera
+    camera: BABYLON.Camera,
+    bulk?: boolean
   ) {
     this.name = name;
     this.scene = scene;
     this.engine = engine;
     this.camera = camera;
     this.options = options;
+    this.bulk = bulk;
     this._noiseSettings = [
       {
         shift: 5,
@@ -246,26 +250,44 @@ class PlanetMaterialManager {
             this._raw.bumpTexture.level =
               +this.options.roughness > 0 ? 0.45 : 0.05;
           })
-          .finally(() => {
+          .finally(async () => {
+            const exportAndSave = new ExportService(
+              `${this.options.terrainSeed}_${this.options.type}_${this.options.atmosphereColor}`,
+              this.options,
+              this.scene,
+              this.engine,
+              this.camera
+            );
+            const paramGenerator = new URLSearchParams(
+              window.location.search
+            ).get("generate");
+            const totalCount =
+              new URLSearchParams(window.location.search).get("totalCount") ??
+              "";
+            const currentCount =
+              new URLSearchParams(window.location.search).get("currentCount") ??
+              "";
+            if (!!paramGenerator && paramGenerator === "true") {
+              if (parseInt(currentCount) <= parseInt(totalCount)) {
+                await exportAndSave.saveAndExport().then(() => {
+                  let url = new URL(window.location.href);
+                  let params = new URLSearchParams(url.search);
+                  let count = parseInt(currentCount);
+                  //Add a third parameter.
+                  params.delete("currentCount");
+                  params.set("currentCount", `${count + 1}`);
+                  setTimeout(() => {
+                    document.location.href = `${
+                      window.location.origin
+                    }?${params.toString()}`;
+                  }, 5000);
+                });
+              }
+            }
             document
               .getElementById("screenshot")
               ?.addEventListener("click", async () => {
-                BABYLON.Tools.CreateScreenshotUsingRenderTarget(
-                  this.engine,
-                  this.camera,
-                  2500,
-                  undefined,
-                  "image/jpeg",
-                  undefined,
-                  undefined,
-                  `${this.options.terrainSeed}_${this.options.type}.jpeg`
-                );
-                console.log(this._raw);
-                await firebaseDB.addDocument(
-                  "generated-planets",
-                  this.options.terrainSeed,
-                  { ...this.options, created: new Date() * 1000 }
-                );
+                exportAndSave.saveAndExport();
               });
             if (statusContainer) statusContainer.innerText = "Done";
           })

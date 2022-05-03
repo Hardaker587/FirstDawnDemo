@@ -1,14 +1,14 @@
 import { firebaseDB } from "../src/service/firebase.service";
 import { Game } from "./service/game.service";
+//rarible SDK
 
 const planet_list: HTMLDivElement = document.getElementById("planet-list");
-
 let params = new URLSearchParams(window.location.search);
 firebaseDB
   .queryDocuments(
     "generated-planets",
     { key: "terrainSeed", operator: "!=", value: "null" },
-    100
+    1000
   )
   .then((res) => {
     const list_holder = document.createElement("div");

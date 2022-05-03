@@ -67,7 +67,6 @@ export class Game {
       new BABYLON.Vector3(0.5, 1, 0),
       this.scene
     );
-
     this.renderPlanet = false;
 
     //make us a skybox they said, sure I said
@@ -97,7 +96,6 @@ export class Game {
       firebaseDB
         .getOneDocument("generated-planets", params)
         .then((res) => {
-          console.log(res);
           this.planet = new Planet(
             "planet",
             res,
@@ -144,15 +142,15 @@ export class Game {
     // make it pretty
     this.prepareGraphicalPipeline();
 
-    if (process.env.NODE_ENV != "production") {
-      this.scene.debugLayer.show({ embedMode: true, overlay: true });
-    }
+    // if (process.env.NODE_ENV != "production") {
+    //   this.scene.debugLayer.show({ embedMode: true, overlay: true });
+    // }
     // render that biatch
     this.engine.runRenderLoop(() => this.render());
   }
 
   render() {
-    if (this.renderPlanet) {
+    if (this.renderPlanet && !!this.planet) {
       // insert planet animation m'ere
       this.planet.rotateAround(
         BABYLON.Vector3.Zero(),
